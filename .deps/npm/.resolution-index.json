@@ -1,28 +1,4 @@
 {
-  "remix-phase-1/task2.sol": {
-    "__sources__": {
-      "remix-phase-1/task2.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract StatePersistence {\r\n    uint public number;\r\n\r\n    function setNumber(uint _num) public {\r\n        number = _num;\r\n    }\r\n}",
-        "file": "remix-phase-1/task2.sol"
-      }
-    }
-  },
-  "remix-phase-1/task3.sol": {
-    "__sources__": {
-      "remix-phase-1/task3.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract autoGetter {\r\n    \r\n    uint public number = 100;\r\n}",
-        "file": "remix-phase-1/task3.sol"
-      }
-    }
-  },
-  "remix-phase-1/task4.sol": {
-    "__sources__": {
-      "remix-phase-1/task4.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract MemortVSStorage {\r\n\r\n function getNumber() public pure returns(uint) {\r\n    uint number = 100;\r\n\r\n    return number;\r\n }\r\n\r\n}",
-        "file": "remix-phase-1/task4.sol"
-      }
-    }
-  },
   "remix-phase-1/task1.sol": {
     "__sources__": {
       "remix-phase-1/task1.sol": {
@@ -31,10 +7,34 @@
       }
     }
   },
+  "remix-phase-1/task2.sol": {
+    "__sources__": {
+      "remix-phase-1/task2.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract StatePersistence {\r\n    uint public number; // State variable stored on the blockchain\r\n\r\n    function setNumber(uint _num) public { // Updates the value of number\r\n        number = _num;\r\n    }\r\n}",
+        "file": "remix-phase-1/task2.sol"
+      }
+    }
+  },
+  "remix-phase-1/task3.sol": {
+    "__sources__": {
+      "remix-phase-1/task3.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract autoGetter {\r\n\r\n    uint public number = 100; // Public variables automatically generate getter functions\r\n}",
+        "file": "remix-phase-1/task3.sol"
+      }
+    }
+  },
+  "remix-phase-1/task4.sol": {
+    "__sources__": {
+      "remix-phase-1/task4.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract MemortVSStorage {\r\n\r\n function getNumber() public pure returns(uint) { // Returns a local variable\r\n    uint number = 100; // Local variable exists only during function execution\r\n\r\n    return number;\r\n }\r\n\r\n}",
+        "file": "remix-phase-1/task4.sol"
+      }
+    }
+  },
   "remix-phase-1/task5.sol": {
     "__sources__": {
       "remix-phase-1/task5.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract stateOverwrite {\r\n    uint public number;\r\n\r\n    function updatenumber(uint _number) public {\r\n\r\n        number = _number;\r\n    }\r\n}",
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract stateOverwrite {\r\n    uint public number; // State Variable\r\n\r\n    function updatenumber(uint _number) public { // Update the state variable with a new value\r\n\r\n        number = _number; \r\n    }\r\n}",
         "file": "remix-phase-1/task5.sol"
       }
     }
@@ -42,39 +42,39 @@
   "remix-phase-1/task6.sol": {
     "__sources__": {
       "remix-phase-1/task6.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract StateReset {\r\n\r\n    uint public number = 10;\r\n\r\n    function reset() public {\r\n        number = 0;\r\n    }\r\n}",
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract StateReset {\r\n\r\n    uint public number = 10; // Initial value\r\n\r\n    function reset() public { // reset number back to zero\r\n        number = 0;\r\n    }\r\n}",
         "file": "remix-phase-1/task6.sol"
-      }
-    }
-  },
-  "remix-phase-1/task7.sol": {
-    "__sources__": {
-      "remix-phase-1/task7.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract IndependentStorage {\r\n    uint public age;\r\n\r\n    bool public passed;\r\n\r\n    address public owner;\r\n\r\n    function setage(uint _age) public {\r\n        age = _age;\r\n    }\r\n\r\n    function setpassed(bool _passed) public {\r\n        passed = _passed;\r\n    }\r\n\r\n    function setowner(address _owner) public {\r\n        owner = _owner;\r\n    }\r\n}",
-        "file": "remix-phase-1/task7.sol"
-      }
-    }
-  },
-  "remix-phase-1/task8.sol": {
-    "__sources__": {
-      "remix-phase-1/task8.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract storagevsmemory {\r\n\r\n    uint public statevalue = 10;\r\n\r\n    function compare() public view returns(uint, uint) {\r\n        uint localvalue = 100;\r\n        \r\n        return(statevalue, localvalue);\r\n    }\r\n}",
-        "file": "remix-phase-1/task8.sol"
       }
     }
   },
   "remix-phase-1/task9.sol": {
     "__sources__": {
       "remix-phase-1/task9.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract immutability {\r\n\r\n    uint public constant Max = 100;\r\n\r\n    /*\r\n        function change() public {\r\n            MAX = 200;\r\n        }\r\n\r\n    */\r\n}",
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract immutability {\r\n\r\n    uint public constant Max = 100; // Constant variable cannot be changed after declaration\r\n\r\n    /*\r\n\r\n    This function world cause a comilation error because constant variables cannot be modified\r\n\r\n        function change() public {\r\n            MAX = 200;\r\n        }\r\n\r\n    */\r\n}",
         "file": "remix-phase-1/task9.sol"
+      }
+    }
+  },
+  "remix-phase-1/task8.sol": {
+    "__sources__": {
+      "remix-phase-1/task8.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract storagevsmemory {\r\n\r\n    uint public statevalue = 10; // State variable stored permanently\r\n\r\n    function compare() public view returns(uint, uint) { // Returns both state and local variables\r\n        uint localvalue = 100; // Local variable exists only while function executes\r\n        \r\n        return(statevalue, localvalue);\r\n    }\r\n}",
+        "file": "remix-phase-1/task8.sol"
+      }
+    }
+  },
+  "remix-phase-1/task7.sol": {
+    "__sources__": {
+      "remix-phase-1/task7.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract IndependentStorage {\r\n    uint public age;\r\n\r\n    bool public passed;\r\n\r\n    address public owner;\r\n\r\n    function setage(uint _age) public { // Update age\r\n        age = _age;\r\n    }\r\n\r\n    function setpassed(bool _passed) public { // Update passed status\r\n        passed = _passed;\r\n    }\r\n\r\n    function setowner(address _owner) public { // Update owner address\r\n        owner = _owner;\r\n    }\r\n}",
+        "file": "remix-phase-1/task7.sol"
       }
     }
   },
   "remix-phase-1/task10.sol": {
     "__sources__": {
       "remix-phase-1/task10.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract constructorstate {\r\n    address public immutable owner;\r\n\r\n    constructor(){\r\n        owner = msg.sender;\r\n    }\r\n}",
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract constructorstate {\r\n    address public immutable owner; // Immutable variable can only be assigned once\r\n\r\n    constructor(){\r\n        owner = msg.sender; // Store the deployers's address\r\n    }\r\n}",
         "file": "remix-phase-1/task10.sol"
       }
     }

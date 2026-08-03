@@ -8,15 +8,15 @@ contract IndependentStorage {
 
     address public owner;
 
-    function setage(uint _age) public {
+    function setage(uint _age) public { // Update age
         age = _age;
     }
 
-    function setpassed(bool _passed) public {
+    function setpassed(bool _passed) public { // Update passed status
         passed = _passed;
     }
 
-    function setowner(address _owner) public {
+    function setowner(address _owner) public { // Update owner address
         owner = _owner;
     }
 }

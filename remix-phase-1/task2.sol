@@ -2,9 +2,9 @@
 pragma solidity ^0.8.0;
 
 contract StatePersistence {
-    uint public number;
+    uint public number; // State variable stored on the blockchain
 
-    function setNumber(uint _num) public {
+    function setNumber(uint _num) public { // Updates the value of number
         number = _num;
     }
 }
