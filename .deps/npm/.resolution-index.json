@@ -1,5 +1,18 @@
 {
   "remix-phase-1/task1.sol": {
-    "__sources__": {}
+    "__sources__": {
+      "remix-phase-1/task1.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract default_state_values {\r\n    uint public number; // By default uint is 0\r\n\r\n    bool public isActive; // By default bool is false\r\n\r\n    address public user; // By default address is 0\r\n}",
+        "file": "remix-phase-1/task1.sol"
+      }
+    }
+  },
+  "remix-phase-1/task2.sol": {
+    "__sources__": {
+      "remix-phase-1/task2.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract StatePersistence {\r\n    uint public number;\r\n\r\n    function setNumber(uint _num) public {\r\n        number = _num;\r\n    }\r\n}",
+        "file": "remix-phase-1/task2.sol"
+      }
+    }
   }
 }
