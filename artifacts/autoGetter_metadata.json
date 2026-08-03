@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "number",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task3.sol": "autoGetter"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task3.sol": {
+			"keccak256": "0x88dff7c62059059f2132f2841948be68970429f4d5f0d4a3edc992f2a5194872",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9a6284d353edb45a52ad4f310ed40f12c72eafe63486323f6bc3e45d3bf86940",
+				"dweb:/ipfs/QmZWJkxTBWuPwY9wa3NzF5U5kaduZWW2t3ned3MW3oiFYr"
+			]
+		}
+	},
+	"version": 1
+}

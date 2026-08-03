@@ -14,5 +14,13 @@
         "file": "remix-phase-1/task2.sol"
       }
     }
+  },
+  "remix-phase-1/task3.sol": {
+    "__sources__": {
+      "remix-phase-1/task3.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract autoGetter {\r\n    \r\n    uint public number = 100;\r\n}",
+        "file": "remix-phase-1/task3.sol"
+      }
+    }
   }
 }
