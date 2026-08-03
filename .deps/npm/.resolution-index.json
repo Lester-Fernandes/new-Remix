@@ -54,5 +54,13 @@
         "file": "remix-phase-1/task7.sol"
       }
     }
+  },
+  "remix-phase-1/task8.sol": {
+    "__sources__": {
+      "remix-phase-1/task8.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract storagevsmemory {\r\n\r\n    uint public statevalue = 10;\r\n\r\n    function compare() public view returns(uint, uint) {\r\n        uint localvalue = 100;\r\n        \r\n        return(statevalue, localvalue);\r\n    }\r\n}",
+        "file": "remix-phase-1/task8.sol"
+      }
+    }
   }
 }
