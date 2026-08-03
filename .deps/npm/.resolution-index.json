@@ -62,5 +62,21 @@
         "file": "remix-phase-1/task8.sol"
       }
     }
+  },
+  "remix-phase-1/task9.sol": {
+    "__sources__": {
+      "remix-phase-1/task9.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract immutability {\r\n\r\n    uint public constant Max = 100;\r\n\r\n    /*\r\n        function change() public {\r\n            MAX = 200;\r\n        }\r\n\r\n    */\r\n}",
+        "file": "remix-phase-1/task9.sol"
+      }
+    }
+  },
+  "remix-phase-1/task10.sol": {
+    "__sources__": {
+      "remix-phase-1/task10.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract constructorstate {\r\n    address public immutable owner;\r\n\r\n    constructor(){\r\n        owner = msg.sender;\r\n    }\r\n}",
+        "file": "remix-phase-1/task10.sol"
+      }
+    }
   }
 }
