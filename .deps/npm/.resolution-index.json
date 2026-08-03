@@ -30,5 +30,13 @@
         "file": "remix-phase-1/task4.sol"
       }
     }
+  },
+  "remix-phase-1/task5.sol": {
+    "__sources__": {
+      "remix-phase-1/task5.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract stateOverwrite {\r\n    uint public number;\r\n\r\n    function updatenumber(uint _number) public {\r\n\r\n        number = _number;\r\n    }\r\n}",
+        "file": "remix-phase-1/task5.sol"
+      }
+    }
   }
 }
