@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "number",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "reset",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task6.sol": "StateReset"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task6.sol": {
+			"keccak256": "0xc7d4fec40aef42a82f6712a1cc80ea53b494d74ffd691c1d780cd491eea35d6e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e58d8e1a0d0e73bc2aed707612c98a8fd8a90a387d849b0a7fc60223c816cc33",
+				"dweb:/ipfs/QmU8WviArnGF3Ge3tKXCGj7t9qiLorN3eysMMg6R76L466"
+			]
+		}
+	},
+	"version": 1
+}

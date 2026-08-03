@@ -1,12 +1,4 @@
 {
-  "remix-phase-1/task1.sol": {
-    "__sources__": {
-      "remix-phase-1/task1.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract default_state_values {\r\n    uint public number; // By default uint is 0\r\n\r\n    bool public isActive; // By default bool is false\r\n\r\n    address public user; // By default address is 0\r\n}",
-        "file": "remix-phase-1/task1.sol"
-      }
-    }
-  },
   "remix-phase-1/task2.sol": {
     "__sources__": {
       "remix-phase-1/task2.sol": {
@@ -31,11 +23,27 @@
       }
     }
   },
+  "remix-phase-1/task1.sol": {
+    "__sources__": {
+      "remix-phase-1/task1.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract default_state_values {\r\n    uint public number; // By default uint is 0\r\n\r\n    bool public isActive; // By default bool is false\r\n\r\n    address public user; // By default address is 0\r\n}",
+        "file": "remix-phase-1/task1.sol"
+      }
+    }
+  },
   "remix-phase-1/task5.sol": {
     "__sources__": {
       "remix-phase-1/task5.sol": {
         "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract stateOverwrite {\r\n    uint public number;\r\n\r\n    function updatenumber(uint _number) public {\r\n\r\n        number = _number;\r\n    }\r\n}",
         "file": "remix-phase-1/task5.sol"
+      }
+    }
+  },
+  "remix-phase-1/task6.sol": {
+    "__sources__": {
+      "remix-phase-1/task6.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract StateReset {\r\n\r\n    uint public number = 10;\r\n\r\n    function reset() public {\r\n        number = 0;\r\n    }\r\n}",
+        "file": "remix-phase-1/task6.sol"
       }
     }
   }
