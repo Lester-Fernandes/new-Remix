@@ -46,5 +46,13 @@
         "file": "remix-phase-1/task6.sol"
       }
     }
+  },
+  "remix-phase-1/task7.sol": {
+    "__sources__": {
+      "remix-phase-1/task7.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract IndependentStorage {\r\n    uint public age;\r\n\r\n    bool public passed;\r\n\r\n    address public owner;\r\n\r\n    function setage(uint _age) public {\r\n        age = _age;\r\n    }\r\n\r\n    function setpassed(bool _passed) public {\r\n        passed = _passed;\r\n    }\r\n\r\n    function setowner(address _owner) public {\r\n        owner = _owner;\r\n    }\r\n}",
+        "file": "remix-phase-1/task7.sol"
+      }
+    }
   }
 }
