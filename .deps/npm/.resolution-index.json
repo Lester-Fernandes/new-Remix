@@ -22,5 +22,13 @@
         "file": "remix-phase-1/task3.sol"
       }
     }
+  },
+  "remix-phase-1/task4.sol": {
+    "__sources__": {
+      "remix-phase-1/task4.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract MemortVSStorage {\r\n\r\n function getNumber() public pure returns(uint) {\r\n    uint number = 100;\r\n\r\n    return number;\r\n }\r\n\r\n}",
+        "file": "remix-phase-1/task4.sol"
+      }
+    }
   }
 }

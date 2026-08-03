@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task4.sol": "MemortVSStorage"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task4.sol": {
+			"keccak256": "0x1ff06206b6c88b268c49213c25f3771ea9657038f4a7f475bb4c06e945902d4a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://53bfdf07da81a1bbce1486e2a6c9f6d12803722461990c219ed83e97c275d295",
+				"dweb:/ipfs/QmePkWPpDxNKXzMxPSaK5k12HTaoN6wxxHYgUvJ9EGB4uw"
+			]
+		}
+	},
+	"version": 1
+}
