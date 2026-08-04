@@ -1,12 +1,4 @@
 {
-  "remix-phase-1/task1.sol": {
-    "__sources__": {
-      "remix-phase-1/task1.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract default_state_values {\r\n    uint public number; // By default uint is 0\r\n\r\n    bool public isActive; // By default bool is false\r\n\r\n    address public user; // By default address is 0\r\n}",
-        "file": "remix-phase-1/task1.sol"
-      }
-    }
-  },
   "remix-phase-1/task2.sol": {
     "__sources__": {
       "remix-phase-1/task2.sol": {
@@ -20,14 +12,6 @@
       "remix-phase-1/task3.sol": {
         "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract autoGetter {\r\n\r\n    uint public number = 100; // Public variables automatically generate getter functions\r\n}",
         "file": "remix-phase-1/task3.sol"
-      }
-    }
-  },
-  "remix-phase-1/task4.sol": {
-    "__sources__": {
-      "remix-phase-1/task4.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract MemortVSStorage {\r\n\r\n function getNumber() public pure returns(uint) { // Returns a local variable\r\n    uint number = 100; // Local variable exists only during function execution\r\n\r\n    return number;\r\n }\r\n\r\n}",
-        "file": "remix-phase-1/task4.sol"
       }
     }
   },
@@ -76,6 +60,70 @@
       "remix-phase-1/task10.sol": {
         "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract constructorstate {\r\n    address public immutable owner; // Immutable variable can only be assigned once\r\n\r\n    constructor(){\r\n        owner = msg.sender; // Store the deployers's address\r\n    }\r\n}",
         "file": "remix-phase-1/task10.sol"
+      }
+    }
+  },
+  "remix-phase-1/task4.sol": {
+    "__sources__": {
+      "remix-phase-1/task4.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract MemortVSStorage {\r\n\r\n function getNumber() public pure returns(uint) { // Returns a local variable\r\n    uint number = 100; // Local variable exists only during function execution\r\n\r\n    return number;\r\n }\r\n\r\n}",
+        "file": "remix-phase-1/task4.sol"
+      }
+    }
+  },
+  "remix-phase-1/task1.sol": {
+    "__sources__": {
+      "remix-phase-1/task1.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract default_state_values {\r\n    uint public number; // By default uint is 0\r\n\r\n    bool public isActive; // By default bool is false\r\n\r\n    address public user; // By default address is 0\r\n}",
+        "file": "remix-phase-1/task1.sol"
+      }
+    }
+  },
+  "remix-phase-1/task11.sol": {
+    "__sources__": {
+      "remix-phase-1/task11.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract publicVisibility {\r\n    uint public number;\r\n\r\n    function setNumber(uint _number) public { // public function can be called from anywhere\r\n        number = _number;\r\n    }\r\n}",
+        "file": "remix-phase-1/task11.sol"
+      }
+    }
+  },
+  "remix-phase-1/task12.sol": {
+    "__sources__": {
+      "remix-phase-1/task12.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract privatefunction { // private function can be used inside this contract\r\n    function word() private pure returns(string memory) {\r\n        return \"Hello World\";\r\n    }\r\n\r\n    function showword() public pure returns(string memory) { // public function calls the provate function\r\n        return word();\r\n    }\r\n}",
+        "file": "remix-phase-1/task12.sol"
+      }
+    }
+  },
+  "remix-phase-1/task13.sol": {
+    "__sources__": {
+      "remix-phase-1/task13.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract internalfunction { // internal function can be called only within the same contract\r\n    function add(uint a, uint b) internal pure returns(uint) {\r\n        return a + b;\r\n    }\r\n\r\n    function calculate() public pure returns(uint){ // public function can call the internal function\r\n        return add(100, 100);\r\n    }\r\n}",
+        "file": "remix-phase-1/task13.sol"
+      }
+    }
+  },
+  "remix-phase-1/task14.sol": {
+    "__sources__": {
+      "remix-phase-1/task14.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract externalfunction { // the external function can call from outside the contract\r\n    function words() external pure returns(string memory) {\r\n        return \"Hello World\";\r\n    }\r\n\r\n    function callwords() public view returns(string memory) { // external function must be called using return this.words();\r\n        return this.words();\r\n    }\r\n}",
+        "file": "remix-phase-1/task14.sol"
+      }
+    }
+  },
+  "remix-phase-1/task15.sol": {
+    "__sources__": {
+      "remix-phase-1/task15.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract viewfunction {\r\n    uint public age = 100;\r\n\r\n    function getage() public view returns(uint) { // view function can only reads data \r\n        return age;\r\n    }\r\n}",
+        "file": "remix-phase-1/task15.sol"
+      }
+    }
+  },
+  "remix-phase-1/task16.sol": {
+    "__sources__": {
+      "remix-phase-1/task16.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract purefunction { // pure function does not read or modify data\r\n    function multiply(uint a, uint b) public pure returns(uint) {\r\n        return a * b;\r\n    }\r\n}",
+        "file": "remix-phase-1/task16.sol"
       }
     }
   }

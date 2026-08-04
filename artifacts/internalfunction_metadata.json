@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "calculate",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task13.sol": "internalfunction"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task13.sol": {
+			"keccak256": "0x9dec3d889055478c8878d59291f6930e51a75d10a7ba6c37a79b699e69783b44",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3e58e79f8d975d4a77c8d4f700cabd6c5eccb8696f4d9e73f633af490f1b29e8",
+				"dweb:/ipfs/QmTnw4isbtBqu8tYhU62GvuxHmFTouaMKwzaiTu6cnz97C"
+			]
+		}
+	},
+	"version": 1
+}
