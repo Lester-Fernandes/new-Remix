@@ -126,5 +126,37 @@
         "file": "remix-phase-1/task16.sol"
       }
     }
+  },
+  "remix-phase-1/task17.sol": {
+    "__sources__": {
+      "remix-phase-1/task17.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract singlevalue {\r\n    function getNumber() public pure returns(uint) {\r\n        return 100;\r\n    }\r\n}",
+        "file": "remix-phase-1/task17.sol"
+      }
+    }
+  },
+  "remix-phase-1/task18.sol": {
+    "__sources__": {
+      "remix-phase-1/task18.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract multiplevalue {\r\n    function data() public pure returns(uint, bool, string memory) {\r\n        return(100, true, \"Lester\");\r\n    }\r\n}",
+        "file": "remix-phase-1/task18.sol"
+      }
+    }
+  },
+  "remix-phase-1/task19.sol": {
+    "__sources__": {
+      "remix-phase-1/task19.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract storeinput {\r\n    string public name;\r\n    function setname(string memory _name) public { // Store the input value\r\n        name = _name;\r\n    }\r\n}",
+        "file": "remix-phase-1/task19.sol"
+      }
+    }
+  },
+  "remix-phase-1/task20.sol": {
+    "__sources__": {
+      "remix-phase-1/task20.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract functionchaining { // First function\r\n    function add(uint a, uint b) public pure returns(uint){\r\n        return a + b;\r\n    }\r\n\r\n    function total() public pure returns(uint){ // Secound function this function call the first function\r\n        return add(100, 100);\r\n    }\r\n}",
+        "file": "remix-phase-1/task20.sol"
+      }
+    }
   }
 }
