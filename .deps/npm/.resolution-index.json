@@ -174,5 +174,13 @@
         "file": "remix-phase-1/task22.sol"
       }
     }
+  },
+  "remix-phase-1/task23.sol": {
+    "__sources__": {
+      "remix-phase-1/task23.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract receiveether {\r\n    uint public amount; // store the amount send\r\n\r\n    function deposit() public payable {\r\n        amount = msg.value; // msg.value tell us how much ether the user send\r\n    }\r\n}",
+        "file": "remix-phase-1/task23.sol"
+      }
+    }
   }
 }
