@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "pay",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task29.sol": "value"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task29.sol": {
+			"keccak256": "0x4e01469c46d4b6b321def9521fa5b519e7afcc4587eb1e16555219e7e0c78484",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e2a7ea3e5e5e7e62bdaf4426c098be14b0a7be5772b1fc9226a494777389c766",
+				"dweb:/ipfs/QmeJT32D9rR6kqo8dGydjiY27r7Et7waKkuhYTvT1VbA3P"
+			]
+		}
+	},
+	"version": 1
+}

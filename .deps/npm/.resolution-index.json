@@ -222,5 +222,13 @@
         "file": "remix-phase-1/task28.sol"
       }
     }
+  },
+  "remix-phase-1/task29.sol": {
+    "__sources__": {
+      "remix-phase-1/task29.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract value {\r\n    function pay() public payable { // user must send some ETH\r\n        require(msg.value > 0, \"Send some ETH\");\r\n    }\r\n}",
+        "file": "remix-phase-1/task29.sol"
+      }
+    }
   }
 }
