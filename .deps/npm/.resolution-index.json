@@ -198,5 +198,13 @@
         "file": "remix-phase-1/task25.sol"
       }
     }
+  },
+  "remix-phase-1/task26.sol": {
+    "__sources__": {
+      "remix-phase-1/task26.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract originexample {\r\n    address public sender;\r\n    address public origin;\r\n\r\n    function check() public {\r\n        sender = msg.sender; // save the address of the person that call the function\r\n\r\n        origin = tx.origin; // save the address how started the transaction\r\n    }\r\n}",
+        "file": "remix-phase-1/task26.sol"
+      }
+    }
   }
 }
