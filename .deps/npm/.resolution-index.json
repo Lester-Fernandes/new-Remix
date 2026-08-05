@@ -166,5 +166,13 @@
         "file": "remix-phase-1/task21.sol"
       }
     }
+  },
+  "remix-phase-1/task22.sol": {
+    "__sources__": {
+      "remix-phase-1/task22.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract comparsender {\r\n    address public caller; // store the address of the person who call the function\r\n\r\n    function update() public {\r\n        caller = msg.sender; // save the caller address\r\n    }\r\n}",
+        "file": "remix-phase-1/task22.sol"
+      }
+    }
   }
 }

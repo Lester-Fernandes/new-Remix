@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "caller",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "update",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task22.sol": "comparsender"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task22.sol": {
+			"keccak256": "0x3d76fca7fd1ad63306084f116726fc542fcbdd2d4b5b613f01ccc1c7d475b518",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://39a8f9797d70eb0b9ab00af11650520cec341dd332cf4042c113122eb2e3d1a6",
+				"dweb:/ipfs/QmRohMwxehkW7yMLDZMtEust1NbsyoG42XyB8aNCX9WRyG"
+			]
+		}
+	},
+	"version": 1
+}
