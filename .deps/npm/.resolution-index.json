@@ -214,5 +214,13 @@
         "file": "remix-phase-1/task27.sol"
       }
     }
+  },
+  "remix-phase-1/task28.sol": {
+    "__sources__": {
+      "remix-phase-1/task28.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract onlyowner {\r\n    address public owner;\r\n\r\n    constructor() { // constructor only runs once when the smart contract is deployed\r\n        owner = msg.sender;\r\n    }\r\n\r\n    function call() public view returns(string memory) {\r\n        require(msg.sender == owner,\"Not the owner\"); // only owner can call this function\r\n\r\n        return \"Welcome Owner\";\r\n    }\r\n}",
+        "file": "remix-phase-1/task28.sol"
+      }
+    }
   }
 }
