@@ -182,5 +182,13 @@
         "file": "remix-phase-1/task23.sol"
       }
     }
+  },
+  "remix-phase-1/task24.sol": {
+    "__sources__": {
+      "remix-phase-1/task24.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract checkvalue {\r\n    uint public value;\r\n\r\n    function pay() payable public {\r\n        value = msg.value; // store the ether amount send\r\n    }\r\n}",
+        "file": "remix-phase-1/task24.sol"
+      }
+    }
   }
 }
