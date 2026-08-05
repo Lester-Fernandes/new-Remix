@@ -206,5 +206,13 @@
         "file": "remix-phase-1/task26.sol"
       }
     }
+  },
+  "remix-phase-1/task27.sol": {
+    "__sources__": {
+      "remix-phase-1/task27.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract ContractA { // first contract\r\n    function getSender() public view returns (address) { // returns the address of whoever called this function\r\n        return msg.sender;\r\n    }\r\n}\r\n\r\ncontract ContractB { // second contract\r\n    function callcontract(address _contractAddress) public view returns (address) { // This function calls contractA\r\n        ContractA contracta = ContractA(_contractAddress); // this connect to the deployed contracta\r\n\r\n        return contracta.getSender(); // call the function in contractA\r\n    }\r\n}",
+        "file": "remix-phase-1/task27.sol"
+      }
+    }
   }
 }

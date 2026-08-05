@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getSender",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task27.sol": "A"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task27.sol": {
+			"keccak256": "0xe8b1724c3d3e9fb7a0678c90bd985e436a766c0d18f9dbc376e58034bc269706",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9f647ca6dd0c48994f7a306aeaf66098fb6af2bc643537e78aa328e7b7532789",
+				"dweb:/ipfs/QmYuEWw7r1mouUa7bWc7MaLvUwSRjAnPGkmXa5tdF68Gxn"
+			]
+		}
+	},
+	"version": 1
+}
