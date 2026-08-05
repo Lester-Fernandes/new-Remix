@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "save",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sender",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task21.sol": "storesender"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task21.sol": {
+			"keccak256": "0x1b993466052985a1c9bcfb24ac4284c09350fd3cebb41b9f8b3323d53881af8b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b9ae199de461c8dafa5390f5af1a2bb530a96ce7a67254a2bed0af927c6b2714",
+				"dweb:/ipfs/QmVfxCRU2E7m8mBbBWfKvJgCsnUukWNGr2DuEFrtyVLUdm"
+			]
+		}
+	},
+	"version": 1
+}
