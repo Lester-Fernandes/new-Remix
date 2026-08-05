@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "payment",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "sendEther",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task30.sol": "log"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task30.sol": {
+			"keccak256": "0x6947c9ec78df7f269bac53df7af756989240d8ab53b5b8e4f6279bdec5c6c484",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fbce5a7247699c0ba358fc3949c14d515674ace174843cd7c0a3d68601230741",
+				"dweb:/ipfs/QmZdb7GwqRsRuXqBv7YbMADdaaEx3zqZHrf1B8yWYhn6vA"
+			]
+		}
+	},
+	"version": 1
+}
