@@ -190,5 +190,13 @@
         "file": "remix-phase-1/task24.sol"
       }
     }
+  },
+  "remix-phase-1/task25.sol": {
+    "__sources__": {
+      "remix-phase-1/task25.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract time {\r\n uint public currenttime; // store the current block time\r\n\r\n function savetime() public {\r\n    currenttime = block.timestamp; // current block timestamp\r\n }   \r\n}",
+        "file": "remix-phase-1/task25.sol"
+      }
+    }
   }
 }

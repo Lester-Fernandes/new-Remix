@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "currenttime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "savetime",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task25.sol": "time"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task25.sol": {
+			"keccak256": "0x61a09c165a9f0948ca2095638e10f3d075a6371336dca9dfb173155c6088cfb5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e919d9984cd202d014a84271e9630db03db495d82888b0f59db72f33bf195769",
+				"dweb:/ipfs/QmTNcZt1NacR9WjeNEMqBHjTiwA7zxcU4G6vZV3ZKYyqTZ"
+			]
+		}
+	},
+	"version": 1
+}
