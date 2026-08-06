@@ -302,5 +302,13 @@
         "file": "remix-phase-1/task38.sol"
       }
     }
+  },
+  "remix-phase-1/task39.sol": {
+    "__sources__": {
+      "remix-phase-1/task39.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract callTransfer {\r\n    function deposit() public payable {} // allows users to send ETH\r\n\r\n    function withdraw() public {\r\n        (bool success, ) = payable(msg.sender).call{value: address(this).balance}(\"\"); // transfer ETH using call method\r\n\r\n        require(success, \"Transfer failed\");\r\n    }\r\n}",
+        "file": "remix-phase-1/task39.sol"
+      }
+    }
   }
 }

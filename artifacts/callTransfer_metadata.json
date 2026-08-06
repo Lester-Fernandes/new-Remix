@@ -1,0 +1,60 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task39.sol": "callTransfer"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task39.sol": {
+			"keccak256": "0x8590b35f5d9c3dd57fe690768c5d0fecb06a434e92178b752bc3f4db29ecc1cc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6280526f4db02309c6dfa41b7a02e2533e1424fdf63498961c94c6da65aecea4",
+				"dweb:/ipfs/QmeFWYRMbXBiXKnuNoMF4C4ppXDZVri3s9HKWiKChpYPFP"
+			]
+		}
+	},
+	"version": 1
+}
