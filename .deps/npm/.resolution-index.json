@@ -286,5 +286,13 @@
         "file": "remix-phase-1/task36.sol"
       }
     }
+  },
+  "remix-phase-1/task37.sol": {
+    "__sources__": {
+      "remix-phase-1/task37.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract multipleDeposits {\r\n    function deposit() public payable {} // deoisit ETH\r\n\r\n    function balance() public view returns(uint){ // display the current ETH balance\r\n        return address(this).balance;\r\n    }\r\n}",
+        "file": "remix-phase-1/task37.sol"
+      }
+    }
   }
 }

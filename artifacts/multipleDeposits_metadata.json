@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "balance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task37.sol": "multipleDeposits"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task37.sol": {
+			"keccak256": "0x86e8c8ba75e93683574286cdf1a01c626e122ceac19cb9b34863188b1a4fa8a6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://874a32728f0a910b68b6de1c40ce8a058fc1ab8b3d9656ba826f55fa6946f223",
+				"dweb:/ipfs/QmbJkFAfRt1q4dBDxkZUjaArYiz6qBa5Lt9CmpxbGEi9t1"
+			]
+		}
+	},
+	"version": 1
+}
