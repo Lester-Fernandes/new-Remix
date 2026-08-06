@@ -246,5 +246,13 @@
         "file": "remix-phase-1/task31.sol"
       }
     }
+  },
+  "remix-phase-1/task32.sol": {
+    "__sources__": {
+      "remix-phase-1/task32.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract balance {\r\n    function deposit() public payable {} // Deposit ETH\r\n\r\n    function getbalance() public view returns(uint) { // Check contract balance\r\n        return address(this).balance;\r\n    }\r\n}",
+        "file": "remix-phase-1/task32.sol"
+      }
+    }
   }
 }

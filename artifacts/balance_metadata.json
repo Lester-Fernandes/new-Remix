@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getbalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task32.sol": "balance"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task32.sol": {
+			"keccak256": "0x441818748e78e1619388438074ceccf6ab0a214a668d2a592715c0a5ab5ae0b9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c9160c833f34ee56ff5c248be380f9b487c74fdc32a9ad815700e698c931348d",
+				"dweb:/ipfs/Qmf7Wzswi7WLU2Xbj96HozcFRTFsPkmcpkTYQgtiVwoaQK"
+			]
+		}
+	},
+	"version": 1
+}
