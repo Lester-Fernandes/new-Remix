@@ -159,14 +159,6 @@
       }
     }
   },
-  "remix-phase-1/task21.sol": {
-    "__sources__": {
-      "remix-phase-1/task21.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract storesender {\r\n    address public sender; // store the address of the person who call the function\r\n\r\n    function save() public {\r\n        sender = msg.sender; // msg.sender address of the caller\r\n    }\r\n}",
-        "file": "remix-phase-1/task21.sol"
-      }
-    }
-  },
   "remix-phase-1/task22.sol": {
     "__sources__": {
       "remix-phase-1/task22.sol": {
@@ -236,6 +228,22 @@
       "remix-phase-1/task30.sol": {
         "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract log {\r\n    event payment(address sender, uint amount); // events stores information in the transaction log\r\n\r\n    function sendEther() public payable {\r\n        emit payment(msg.sender, msg.value); // save sender and ETH amount in the event log\r\n    }\r\n}",
         "file": "remix-phase-1/task30.sol"
+      }
+    }
+  },
+  "remix-phase-1/task21.sol": {
+    "__sources__": {
+      "remix-phase-1/task21.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract storesender {\r\n    address public sender; // store the address of the person who call the function\r\n\r\n    function save() public {\r\n        sender = msg.sender; // msg.sender address of the caller\r\n    }\r\n}",
+        "file": "remix-phase-1/task21.sol"
+      }
+    }
+  },
+  "remix-phase-1/task31.sol": {
+    "__sources__": {
+      "remix-phase-1/task31.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract DepositETH {\r\n    function deposit() public payable { // payable function can receive ETH\r\n\r\n    }\r\n}",
+        "file": "remix-phase-1/task31.sol"
       }
     }
   }

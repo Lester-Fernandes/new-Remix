@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task31.sol": "DepositETH"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task31.sol": {
+			"keccak256": "0x38ce16df75cfc764d423987107d0b9874b91b34bac898a5f896f1872bc808b78",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6941aeab9808fcdf404e5a2dcf31578202ac8aac2c8fabd95a8d7edfd71194e0",
+				"dweb:/ipfs/QmZAHZe65TGcN1SsB7yXkgDauk4uhaTbEWEpxygeXKHbWU"
+			]
+		}
+	},
+	"version": 1
+}
