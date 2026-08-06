@@ -310,5 +310,13 @@
         "file": "remix-phase-1/task39.sol"
       }
     }
+  },
+  "remix-phase-1/task40.sol": {
+    "__sources__": {
+      "remix-phase-1/task40.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract balanceChange {\r\n    function deposit() public payable {} // allows user to send ETH\r\n\r\n    function getBalance() public view returns(uint) { // return the current balance of the contract\r\n        return address(this).balance;\r\n    }\r\n\r\n    function withdraw() public { // transfers the entire contract balance to the caller\r\n        payable(msg.sender).transfer(address(this).balance);\r\n    }\r\n}",
+        "file": "remix-phase-1/task40.sol"
+      }
+    }
   }
 }
