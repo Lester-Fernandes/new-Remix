@@ -294,5 +294,13 @@
         "file": "remix-phase-1/task37.sol"
       }
     }
+  },
+  "remix-phase-1/task38.sol": {
+    "__sources__": {
+      "remix-phase-1/task38.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract Nopayable {\r\n    function deposit() public { // this function cannot receive ETH\r\n\r\n    }\r\n}",
+        "file": "remix-phase-1/task38.sol"
+      }
+    }
   }
 }
