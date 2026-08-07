@@ -326,5 +326,13 @@
         "file": "remix-phase-1/task41.sol"
       }
     }
+  },
+  "remix-phase-1/task42.sol": {
+    "__sources__": {
+      "remix-phase-1/task42.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract requireFail {\r\n    function checkage(uint _age) public pure returns(string memory) {\r\n        require(_age >= 18); // age must be at least 18\r\n\r\n        return \"Access Granted\";\r\n    }\r\n}",
+        "file": "remix-phase-1/task42.sol"
+      }
+    }
   }
 }
