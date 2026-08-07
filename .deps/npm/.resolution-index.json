@@ -334,5 +334,13 @@
         "file": "remix-phase-1/task42.sol"
       }
     }
+  },
+  "remix-phase-1/task43.sol": {
+    "__sources__": {
+      "remix-phase-1/task43.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract multiplerequire {\r\n    function register(uint age, uint marks) public pure returns(string memory) {\r\n        require(age >= 18,\"Age must be above 18\"); // checks if the age is 18 or above\r\n\r\n        require(marks >= 50,\"Marks must be at least 50\"); // checks if the marks are 50 or above\r\n\r\n        return \"Registration Successful\";\r\n    }\r\n}",
+        "file": "remix-phase-1/task43.sol"
+      }
+    }
   }
 }
