@@ -358,5 +358,13 @@
         "file": "remix-phase-1/task45.sol"
       }
     }
+  },
+  "remix-phase-1/task46.sol": {
+    "__sources__": {
+      "remix-phase-1/task46.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract revertExample {\r\n    function withdraw(uint amount) public pure {\r\n        if(amount > 100){ // stop the transaction manually\r\n            revert(\"Amount is too high\");\r\n        }\r\n    }\r\n}",
+        "file": "remix-phase-1/task46.sol"
+      }
+    }
   }
 }

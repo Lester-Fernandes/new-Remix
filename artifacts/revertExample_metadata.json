@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task46.sol": "revertExample"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task46.sol": {
+			"keccak256": "0xab4c2192a0388c69d471ef56036fcfddf59cc51548e663007170ba38d7845880",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9e53c463498511ecd50a0ec86030793c67b96faa7dedf854393da44d2451d3c3",
+				"dweb:/ipfs/QmS7Nd1qtTv2n9N2cJcmwDGkbekp67MRwd9c2bVaVgWHuq"
+			]
+		}
+	},
+	"version": 1
+}
