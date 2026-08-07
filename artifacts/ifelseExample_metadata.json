@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					}
+				],
+				"name": "checknumber",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task44.sol": "ifelseExample"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task44.sol": {
+			"keccak256": "0xdb648bbb80bfd1b0948cdac341152be7b21bde2a948bb7b4604ba6a655ccfcc0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3777a8f5163f3f56f3af9a1a92d45c9ffedeef04e82edb874426dc13f3d27c7e",
+				"dweb:/ipfs/QmNoNQqLpvoavPjpw8hCGCm4NGmLWGmXuWqosYfbgpUNe9"
+			]
+		}
+	},
+	"version": 1
+}

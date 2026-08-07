@@ -342,5 +342,13 @@
         "file": "remix-phase-1/task43.sol"
       }
     }
+  },
+  "remix-phase-1/task44.sol": {
+    "__sources__": {
+      "remix-phase-1/task44.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract ifelseExample {\r\n    function checknumber(uint num) public pure returns(string memory) {\r\n        if(num >= 50) {\r\n            return \"pass\";\r\n        }else{\r\n            return \"fail\";\r\n        }\r\n\r\n    }\r\n}",
+        "file": "remix-phase-1/task44.sol"
+      }
+    }
   }
 }
