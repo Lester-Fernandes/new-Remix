@@ -350,5 +350,13 @@
         "file": "remix-phase-1/task44.sol"
       }
     }
+  },
+  "remix-phase-1/task45.sol": {
+    "__sources__": {
+      "remix-phase-1/task45.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract returnEarly {\r\n    function test(uint num) public pure returns(string memory) {\r\n        if(num == 0){\r\n            return \"Number is Zero\"; // Function stop here\r\n        }\r\n        return \"Number is not zero\"; // Function runs only if the number is not zero\r\n    }\r\n}",
+        "file": "remix-phase-1/task45.sol"
+      }
+    }
   }
 }
