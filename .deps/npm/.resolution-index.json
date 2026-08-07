@@ -390,5 +390,13 @@
         "file": "remix-phase-1/task49.sol"
       }
     }
+  },
+  "remix-phase-1/task50.sol": {
+    "__sources__": {
+      "remix-phase-1/task50.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract skipLogic {\r\n    uint public total;\r\n\r\n    function addnum(uint num) public {\r\n        if(num == 0){ // If number is 0 then the function will stop\r\n            return;\r\n        }\r\n        total = total + num; // This will run only if the number is not 0\r\n    }\r\n}",
+        "file": "remix-phase-1/task50.sol"
+      }
+    }
   }
 }
