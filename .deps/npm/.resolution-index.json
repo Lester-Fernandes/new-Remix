@@ -382,5 +382,13 @@
         "file": "remix-phase-1/task48.sol"
       }
     }
+  },
+  "remix-phase-1/task49.sol": {
+    "__sources__": {
+      "remix-phase-1/task49.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract nestedIf {\r\n    function check(uint age, uint marks) public pure returns(string memory) {\r\n        if(age >= 18) {\r\n            if (marks >= 50) {\r\n                return \"Selected\";\r\n            } else {\r\n                return \"Failed in Marks\";\r\n            }\r\n        }else {\r\n            return \"Under Age\";\r\n        }\r\n    }\r\n}",
+        "file": "remix-phase-1/task49.sol"
+      }
+    }
   }
 }
