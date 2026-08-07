@@ -239,11 +239,11 @@
       }
     }
   },
-  "remix-phase-1/task31.sol": {
+  "remix-phase-1/task40.sol": {
     "__sources__": {
-      "remix-phase-1/task31.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract DepositETH {\r\n    function deposit() public payable { // payable function can receive ETH\r\n\r\n    }\r\n}",
-        "file": "remix-phase-1/task31.sol"
+      "remix-phase-1/task40.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract balanceChange {\r\n    function deposit() public payable {} // allows user to send ETH\r\n\r\n    function getBalance() public view returns(uint) { // return the current balance of the contract\r\n        return address(this).balance;\r\n    }\r\n\r\n    function withdraw() public { // transfers the entire contract balance to the caller\r\n        payable(msg.sender).transfer(address(this).balance);\r\n    }\r\n}",
+        "file": "remix-phase-1/task40.sol"
       }
     }
   },
@@ -263,14 +263,6 @@
       }
     }
   },
-  "remix-phase-1/task35.sol": {
-    "__sources__": {
-      "remix-phase-1/task35.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract sendETH {\r\n    function deposit() public payable {} // deposit ETH\r\n\r\n    function sendeth(address payable receiver, uint amount) public { // This function sends ETH from one contract to another address\r\n        receiver.transfer(amount);\r\n    }\r\n}",
-        "file": "remix-phase-1/task35.sol"
-      }
-    }
-  },
   "remix-phase-1/task34.sol": {
     "__sources__": {
       "remix-phase-1/task34.sol": {
@@ -284,6 +276,14 @@
       "remix-phase-1/task36.sol": {
         "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract emptywithdraw {\r\n    function withdraw() public {\r\n        require(address(this).balance > 0, \"No ETH available\"); // Check enough ETH is available\r\n\r\n        payable(msg.sender).transfer(address(this).balance);\r\n    }\r\n}",
         "file": "remix-phase-1/task36.sol"
+      }
+    }
+  },
+  "remix-phase-1/task35.sol": {
+    "__sources__": {
+      "remix-phase-1/task35.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract sendETH {\r\n    function deposit() public payable {} // deposit ETH\r\n\r\n    function sendeth(address payable receiver, uint amount) public { // This function sends ETH from one contract to another address\r\n        receiver.transfer(amount);\r\n    }\r\n}",
+        "file": "remix-phase-1/task35.sol"
       }
     }
   },
@@ -311,11 +311,19 @@
       }
     }
   },
-  "remix-phase-1/task40.sol": {
+  "remix-phase-1/task31.sol": {
     "__sources__": {
-      "remix-phase-1/task40.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract balanceChange {\r\n    function deposit() public payable {} // allows user to send ETH\r\n\r\n    function getBalance() public view returns(uint) { // return the current balance of the contract\r\n        return address(this).balance;\r\n    }\r\n\r\n    function withdraw() public { // transfers the entire contract balance to the caller\r\n        payable(msg.sender).transfer(address(this).balance);\r\n    }\r\n}",
-        "file": "remix-phase-1/task40.sol"
+      "remix-phase-1/task31.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract DepositETH {\r\n    function deposit() public payable { // payable function can receive ETH\r\n\r\n    }\r\n}",
+        "file": "remix-phase-1/task31.sol"
+      }
+    }
+  },
+  "remix-phase-1/task41.sol": {
+    "__sources__": {
+      "remix-phase-1/task41.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract requireexample {\r\n    function checkNumber(uint _number) public pure returns(string memory) { // user must enter a number greater than 10\r\n        require(_number > 10);\r\n\r\n        return \"valid number\";\r\n    }\r\n}",
+        "file": "remix-phase-1/task41.sol"
       }
     }
   }
