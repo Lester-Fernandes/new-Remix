@@ -374,5 +374,13 @@
         "file": "remix-phase-1/task47.sol"
       }
     }
+  },
+  "remix-phase-1/task48.sol": {
+    "__sources__": {
+      "remix-phase-1/task48.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract requireMessage {\r\n    function login(string memory password) public pure returns(string memory) {\r\n        require(bytes(password).length > 5, \"Password is too short\"); // Password length must be greater than 5\r\n        \r\n        return \"Login Successful\";\r\n    }\r\n}",
+        "file": "remix-phase-1/task48.sol"
+      }
+    }
   }
 }

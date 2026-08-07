@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "password",
+						"type": "string"
+					}
+				],
+				"name": "login",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task48.sol": "requireMessage"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task48.sol": {
+			"keccak256": "0x4efd113d098a0912a30db634fad5f6dd2f547472ea59618f6ce3c693ce995cdc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bb59d738b471e12e9ecf920eba33cedda073169892c4e76b8d022a1989d89609",
+				"dweb:/ipfs/QmT8FbqwhjMDLoMKA8JEAu2aZwBC9zjZxKu9AQbpKZLkeu"
+			]
+		}
+	},
+	"version": 1
+}
