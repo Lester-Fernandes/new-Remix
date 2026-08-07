@@ -366,5 +366,13 @@
         "file": "remix-phase-1/task46.sol"
       }
     }
+  },
+  "remix-phase-1/task47.sol": {
+    "__sources__": {
+      "remix-phase-1/task47.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract assertExample {\r\n    function test(uint num) public pure {\r\n        assert (num == 10); // Assert should always be true\r\n    }\r\n}",
+        "file": "remix-phase-1/task47.sol"
+      }
+    }
   }
 }
