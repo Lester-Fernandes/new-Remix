@@ -407,14 +407,6 @@
       }
     }
   },
-  "remix-phase-1/task51.sol": {
-    "__sources__": {
-      "remix-phase-1/task51.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract map {\r\n    mapping(address => uint) public balance;\r\n}",
-        "file": "remix-phase-1/task51.sol"
-      }
-    }
-  },
   "remix-phase-1/task53.sol": {
     "__sources__": {
       "remix-phase-1/task53.sol": {
@@ -452,6 +444,22 @@
       "remix-phase-1/task57.sol": {
         "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract deletemapping {\r\n    mapping(address => uint) public user;\r\n\r\n    function setBalance(uint _amount) public {\r\n        user[msg.sender] = _amount;\r\n    }\r\n\r\n    function resetbalance() public { // delete the user's value\r\n        delete user[msg.sender];\r\n    }\r\n        \r\n}",
         "file": "remix-phase-1/task57.sol"
+      }
+    }
+  },
+  "remix-phase-1/task51.sol": {
+    "__sources__": {
+      "remix-phase-1/task51.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract map {\r\n    mapping(address => uint) public balance;\r\n}",
+        "file": "remix-phase-1/task51.sol"
+      }
+    }
+  },
+  "remix-phase-1/task58.sol": {
+    "__sources__": {
+      "remix-phase-1/task58.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract nestedmap {\r\n    // user address -> another address -> amount\r\n    mapping(address => mapping(address => uint)) public user;\r\n\r\n    function setAllowance(address _user, uint _amount) public {\r\n    user[msg.sender][_user] = _amount;\r\n    }\r\n}",
+        "file": "remix-phase-1/task58.sol"
       }
     }
   }
