@@ -319,14 +319,6 @@
       }
     }
   },
-  "remix-phase-1/task41.sol": {
-    "__sources__": {
-      "remix-phase-1/task41.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract requireexample {\r\n    function checkNumber(uint _number) public pure returns(string memory) { // user must enter a number greater than 10\r\n        require(_number > 10);\r\n\r\n        return \"valid number\";\r\n    }\r\n}",
-        "file": "remix-phase-1/task41.sol"
-      }
-    }
-  },
   "remix-phase-1/task42.sol": {
     "__sources__": {
       "remix-phase-1/task42.sol": {
@@ -396,6 +388,46 @@
       "remix-phase-1/task50.sol": {
         "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract skipLogic {\r\n    uint public total;\r\n\r\n    function addnum(uint num) public {\r\n        if(num == 0){ // If number is 0 then the function will stop\r\n            return;\r\n        }\r\n        total = total + num; // This will run only if the number is not 0\r\n    }\r\n}",
         "file": "remix-phase-1/task50.sol"
+      }
+    }
+  },
+  "remix-phase-1/task41.sol": {
+    "__sources__": {
+      "remix-phase-1/task41.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract requireexample {\r\n    function checkNumber(uint _number) public pure returns(string memory) { // user must enter a number greater than 10\r\n        require(_number > 10);\r\n\r\n        return \"valid number\";\r\n    }\r\n}",
+        "file": "remix-phase-1/task41.sol"
+      }
+    }
+  },
+  "remix-phase-1/task52.sol": {
+    "__sources__": {
+      "remix-phase-1/task52.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract data {\r\n    mapping(address => uint) public balance; // stores the number for each user\r\n\r\n    function setBalance(uint _amount) public {\r\n        balance[msg.sender] = _amount;\r\n    }\r\n}",
+        "file": "remix-phase-1/task52.sol"
+      }
+    }
+  },
+  "remix-phase-1/task51.sol": {
+    "__sources__": {
+      "remix-phase-1/task51.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract map {\r\n    mapping(address => uint) public balance;\r\n}",
+        "file": "remix-phase-1/task51.sol"
+      }
+    }
+  },
+  "remix-phase-1/task53.sol": {
+    "__sources__": {
+      "remix-phase-1/task53.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract multipleUser {\r\n    mapping(address => uint) public user;\r\n\r\n    function amount(uint _amount) public { // Each account get it own value\r\n        user[msg.sender] = _amount;\r\n    }\r\n}",
+        "file": "remix-phase-1/task53.sol"
+      }
+    }
+  },
+  "remix-phase-1/task54.sol": {
+    "__sources__": {
+      "remix-phase-1/task54.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract autogetter {\r\n    mapping(address => uint) public user; // public automatically  creates a getter \r\n\r\n    function setBalance(uint _amount) public {\r\n        user[msg.sender] = _amount;\r\n    }\r\n}",
+        "file": "remix-phase-1/task54.sol"
       }
     }
   }
