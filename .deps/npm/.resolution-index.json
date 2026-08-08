@@ -430,5 +430,29 @@
         "file": "remix-phase-1/task54.sol"
       }
     }
+  },
+  "remix-phase-1/task55.sol": {
+    "__sources__": {
+      "remix-phase-1/task55.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract overwrite {\r\n    mapping(address => uint) public user;\r\n\r\n    function balance(uint _amount) public { // save or replace the value\r\n        user[msg.sender] = _amount;\r\n    }\r\n}",
+        "file": "remix-phase-1/task55.sol"
+      }
+    }
+  },
+  "remix-phase-1/task56.sol": {
+    "__sources__": {
+      "remix-phase-1/task56.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract defaultdata {\r\n    mapping(address => uint) public user; // by default the value is 0\r\n}",
+        "file": "remix-phase-1/task56.sol"
+      }
+    }
+  },
+  "remix-phase-1/task57.sol": {
+    "__sources__": {
+      "remix-phase-1/task57.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract deletemapping {\r\n    mapping(address => uint) public user;\r\n\r\n    function setBalance(uint _amount) public {\r\n        user[msg.sender] = _amount;\r\n    }\r\n\r\n    function resetbalance() public { // delete the user's value\r\n        delete user[msg.sender];\r\n    }\r\n        \r\n}",
+        "file": "remix-phase-1/task57.sol"
+      }
+    }
   }
 }
