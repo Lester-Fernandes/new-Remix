@@ -470,5 +470,13 @@
         "file": "remix-phase-1/task59.sol"
       }
     }
+  },
+  "remix-phase-1/task60.sol": {
+    "__sources__": {
+      "remix-phase-1/task60.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract valmapping {\r\n    mapping(address => uint) public user;\r\n\r\n    function setbalance(address _user, uint _amount) public { // anyone can call this function\r\n        user[msg.sender] = _amount; \r\n    }\r\n}",
+        "file": "remix-phase-1/task60.sol"
+      }
+    }
   }
 }
