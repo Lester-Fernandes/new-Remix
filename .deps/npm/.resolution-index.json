@@ -399,11 +399,19 @@
       }
     }
   },
-  "remix-phase-1/task52.sol": {
+  "remix-phase-1/task59.sol": {
     "__sources__": {
-      "remix-phase-1/task52.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract data {\r\n    mapping(address => uint) public balance; // stores the number for each user\r\n\r\n    function setBalance(uint _amount) public {\r\n        balance[msg.sender] = _amount;\r\n    }\r\n}",
-        "file": "remix-phase-1/task52.sol"
+      "remix-phase-1/task59.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract mappingrequire {\r\n    mapping(address => uint) public user;\r\n\r\n    function setBalance(uint _amount) public {\r\n        user[msg.sender] = _amount;\r\n    }\r\n\r\n    function withdraw(uint _amount) public { // user cannot withdraw more than their balance\r\n        require(user[msg.sender] >= _amount, \"Not enough balance\");\r\n\r\n        user[msg.sender] = _amount;\r\n    }\r\n}",
+        "file": "remix-phase-1/task59.sol"
+      }
+    }
+  },
+  "remix-phase-1/task60.sol": {
+    "__sources__": {
+      "remix-phase-1/task60.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract valmapping {\r\n    mapping(address => uint) public user;\r\n\r\n    function setbalance(address _user, uint _amount) public { // anyone can call this function\r\n        user[msg.sender] = _amount; \r\n    }\r\n}",
+        "file": "remix-phase-1/task60.sol"
       }
     }
   },
@@ -439,11 +447,11 @@
       }
     }
   },
-  "remix-phase-1/task51.sol": {
+  "remix-phase-1/task57.sol": {
     "__sources__": {
-      "remix-phase-1/task51.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract map {\r\n    mapping(address => uint) public balance;\r\n}",
-        "file": "remix-phase-1/task51.sol"
+      "remix-phase-1/task57.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract deletemapping {\r\n    mapping(address => uint) public user;\r\n\r\n    function setBalance(uint _amount) public {\r\n        user[msg.sender] = _amount;\r\n    }\r\n\r\n    function resetbalance() public { // delete the user's value\r\n        delete user[msg.sender];\r\n    }\r\n        \r\n}",
+        "file": "remix-phase-1/task57.sol"
       }
     }
   },
@@ -455,27 +463,27 @@
       }
     }
   },
-  "remix-phase-1/task57.sol": {
+  "remix-phase-1/task51.sol": {
     "__sources__": {
-      "remix-phase-1/task57.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract deletemapping {\r\n    mapping(address => uint) public user;\r\n\r\n    function setBalance(uint _amount) public {\r\n        user[msg.sender] = _amount;\r\n    }\r\n\r\n    function resetbalance() public { // delete the user's value\r\n        delete user[msg.sender];\r\n    }\r\n        \r\n}",
-        "file": "remix-phase-1/task57.sol"
+      "remix-phase-1/task51.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract map {\r\n    mapping(address => uint) public balance;\r\n}",
+        "file": "remix-phase-1/task51.sol"
       }
     }
   },
-  "remix-phase-1/task59.sol": {
+  "remix-phase-1/task52.sol": {
     "__sources__": {
-      "remix-phase-1/task59.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract mappingrequire {\r\n    mapping(address => uint) public user;\r\n\r\n    function setBalance(uint _amount) public {\r\n        user[msg.sender] = _amount;\r\n    }\r\n\r\n    function withdraw(uint _amount) public { // user cannot withdraw more than their balance\r\n        require(user[msg.sender] >= _amount, \"Not enough balance\");\r\n\r\n        user[msg.sender] = _amount;\r\n    }\r\n}",
-        "file": "remix-phase-1/task59.sol"
+      "remix-phase-1/task52.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract data {\r\n    mapping(address => uint) public balance; // stores the number for each user\r\n\r\n    function setBalance(uint _amount) public {\r\n        balance[msg.sender] = _amount;\r\n    }\r\n}",
+        "file": "remix-phase-1/task52.sol"
       }
     }
   },
-  "remix-phase-1/task60.sol": {
+  "remix-phase-1/task61.sol": {
     "__sources__": {
-      "remix-phase-1/task60.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract valmapping {\r\n    mapping(address => uint) public user;\r\n\r\n    function setbalance(address _user, uint _amount) public { // anyone can call this function\r\n        user[msg.sender] = _amount; \r\n    }\r\n}",
-        "file": "remix-phase-1/task60.sol"
+      "remix-phase-1/task61.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract structexample {\r\n    struct user { // Struct groups different types of data together\r\n        string Lester;\r\n        uint age;\r\n        bool active;\r\n    }\r\n\r\n    user public User; // Create a user variable\r\n}",
+        "file": "remix-phase-1/task61.sol"
       }
     }
   }

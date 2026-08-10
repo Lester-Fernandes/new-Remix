@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "User",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "Lester",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "age",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "active",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task61.sol": "structexample"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task61.sol": {
+			"keccak256": "0xd431987590773c437ebbd40c8eacc5e7c3e3267642ee7056ab95c6f8a938287c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c816cb4c14943cf950605e3c77f63d1f18e6d87e23727d784d588e96c54efefb",
+				"dweb:/ipfs/QmRo2cLHCAb7xbfRcforL3LYuJbm2U2MtXSYpTitSBpcyW"
+			]
+		}
+	},
+	"version": 1
+}
