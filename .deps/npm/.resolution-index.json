@@ -494,5 +494,13 @@
         "file": "remix-phase-1/task62.sol"
       }
     }
+  },
+  "remix-phase-1/task63.sol": {
+    "__sources__": {
+      "remix-phase-1/task63.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract UpdateStruct {\r\n    struct User {\r\n        string name;\r\n        uint age;\r\n    }\r\n\r\n    User public user;\r\n\r\n    function setUser(string memory _name, uint _age) public {\r\n        user = User(_name, _age);\r\n    }\r\n\r\n    function updateAge(uint _newAge) public { // only change the age of the user\r\n        user.age = _newAge;\r\n    }\r\n}\r\n",
+        "file": "remix-phase-1/task63.sol"
+      }
+    }
   }
 }
