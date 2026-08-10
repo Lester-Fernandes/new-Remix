@@ -8,12 +8,17 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
 						"internalType": "uint256",
-						"name": "_amount",
+						"name": "_age",
 						"type": "uint256"
 					}
 				],
-				"name": "amount",
+				"name": "register",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -29,8 +34,13 @@
 				"name": "user",
 				"outputs": [
 					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "age",
 						"type": "uint256"
 					}
 				],
@@ -51,7 +61,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-1/task53.sol": "multipleUser"
+			"remix-phase-1/task65.sol": "multipleUser"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -65,12 +75,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-1/task53.sol": {
-			"keccak256": "0x0001727d57b78de3c2b08fb10cab409b483e0253eff308230de755c4a30ee1af",
+		"remix-phase-1/task65.sol": {
+			"keccak256": "0x7a11c50a17b5dcebea830f1da68dea444369491784c1c6f1983de9a6833d14e8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2a67aa02dc7c3e14148ecaeedafc9d6275f839e3fd6cded45e3c827aee14eee1",
-				"dweb:/ipfs/QmRWMQewbWDhC5DBpMesMYaSJEHeZmxXoW24umHvVNxuRr"
+				"bzz-raw://717efe70ef844d2aff1cdaf04a58b49a09b7dc5aa4330dd687c3d6a5313dea70",
+				"dweb:/ipfs/QmPna5rkboPdoah9sXeL8sik1NPVDNHL4ZDP9rRztSjyWJ"
 			]
 		}
 	},

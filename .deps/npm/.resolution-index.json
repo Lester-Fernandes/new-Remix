@@ -510,5 +510,13 @@
         "file": "remix-phase-1/task64.sol"
       }
     }
+  },
+  "remix-phase-1/task65.sol": {
+    "__sources__": {
+      "remix-phase-1/task65.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract multipleUser {\r\n    struct User {\r\n        string name;\r\n        uint age;\r\n    }\r\n\r\n    mapping(address => User) public user; // Each address gets its own user struct\r\n\r\n    function register( string memory _name, uint _age) public {\r\n        user[msg.sender] = User(_name, _age); // Store data for the caller\r\n    }\r\n}",
+        "file": "remix-phase-1/task65.sol"
+      }
+    }
   }
 }
