@@ -526,5 +526,13 @@
         "file": "remix-phase-1/task66.sol"
       }
     }
+  },
+  "remix-phase-1/task67.sol": {
+    "__sources__": {
+      "remix-phase-1/task67.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract DeleteStruct {\r\nstruct User{\r\n    string name;\r\n    uint age;\r\n    bool active;\r\n}\r\n\r\nUser public user;\r\n\r\nfunction setUser(string memory _name, uint _age) public {\r\n    user = User(_name, _age, true);\r\n}\r\n\r\nfunction deleteUser() public { // delete the entire struct\r\n    delete user;\r\n}\r\n}",
+        "file": "remix-phase-1/task67.sol"
+      }
+    }
   }
 }
