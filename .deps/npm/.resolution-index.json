@@ -574,5 +574,13 @@
         "file": "remix-phase-1/task72.sol"
       }
     }
+  },
+  "remix-phase-1/task73.sol": {
+    "__sources__": {
+      "remix-phase-1/task73.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract multipleModifiers {\r\n    address public owner;\r\n    bool public active = true;\r\n\r\n    constructor() {\r\n        owner = msg.sender;\r\n    }\r\n\r\n    modifier onlyOwner() { // First modifier\r\n        require(msg.sender == owner, \"Not the owner\");\r\n        _;\r\n    }\r\n\r\n    modifier whenActive() { // Second modifier\r\n        require(active == true, \"Contract is not active\");\r\n        _;\r\n    }\r\n\r\n    function secret() public view onlyOwner whenActive returns(string memory) { // Both modifiers are used\r\n        return \"Function executed\";\r\n    }\r\n}",
+        "file": "remix-phase-1/task73.sol"
+      }
+    }
   }
 }
