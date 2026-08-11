@@ -622,5 +622,13 @@
         "file": "remix-phase-1/task78.sol"
       }
     }
+  },
+  "remix-phase-1/task79.sol": {
+    "__sources__": {
+      "remix-phase-1/task79.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract ModifierFlow {\r\n    address public owner;\r\n    uint public number;\r\n\r\n    constructor() {\r\n        owner = msg.sender;\r\n    }\r\n\r\n    modifier onlyOwner() { // Check Owner\r\n        require(msg.sender == owner, \"Not the Owner\");\r\n\r\n        _; // Function executes here\r\n\r\n        number = number + 10; // This runs after the function\r\n    }\r\n\r\n    function increase() public onlyOwner {\r\n        number = number + 5;\r\n    }\r\n}",
+        "file": "remix-phase-1/task79.sol"
+      }
+    }
   }
 }
