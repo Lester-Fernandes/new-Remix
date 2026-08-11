@@ -606,5 +606,13 @@
         "file": "remix-phase-1/task76.sol"
       }
     }
+  },
+  "remix-phase-1/task77.sol": {
+    "__sources__": {
+      "remix-phase-1/task77.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract protected {\r\n    address public owner;\r\n    uint public secretNumber;\r\n\r\n    constructor() {\r\n        owner = msg.sender;\r\n    }\r\n\r\n    modifier onlyOwner() {\r\n        require(msg.sender == owner, \"Not the owner\");\r\n\r\n        _;\r\n    }\r\n\r\n    function secSecret(uint _number) public onlyOwner { // Protected function\r\n        secretNumber = _number;\r\n    }\r\n}",
+        "file": "remix-phase-1/task77.sol"
+      }
+    }
   }
 }
