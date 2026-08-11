@@ -479,14 +479,6 @@
       }
     }
   },
-  "remix-phase-1/task61.sol": {
-    "__sources__": {
-      "remix-phase-1/task61.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract structexample {\r\n    struct user { // Struct groups different types of data together\r\n        string Lester;\r\n        uint age;\r\n        bool active;\r\n    }\r\n\r\n    user public User; // Create a user variable\r\n}",
-        "file": "remix-phase-1/task61.sol"
-      }
-    }
-  },
   "remix-phase-1/task62.sol": {
     "__sources__": {
       "remix-phase-1/task62.sol": {
@@ -556,6 +548,22 @@
       "remix-phase-1/task70.sol": {
         "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract SttructFields {\r\n    struct User {\r\n        string name;\r\n        uint age;\r\n        bool active;\r\n    }\r\n\r\n    User public user;\r\n\r\n    function setUser(string memory _name, uint _age) public {\r\n        user = User(_name, _age, true);\r\n    }\r\n\r\n    function getName() public view returns(string memory) { // Access only the name field\r\n        return user.name;\r\n    }\r\n\r\n    function getAge() public view returns(uint) { // Access only the age field\r\n        return user.age;\r\n    }\r\n\r\n    function getActive() public view returns(bool) { // Access only the active field\r\n        return user.active;\r\n    }\r\n}",
         "file": "remix-phase-1/task70.sol"
+      }
+    }
+  },
+  "remix-phase-1/task61.sol": {
+    "__sources__": {
+      "remix-phase-1/task61.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract structexample {\r\n    struct user { // Struct groups different types of data together\r\n        string Lester;\r\n        uint age;\r\n        bool active;\r\n    }\r\n\r\n    user public User; // Create a user variable\r\n}",
+        "file": "remix-phase-1/task61.sol"
+      }
+    }
+  },
+  "remix-phase-1/task71.sol": {
+    "__sources__": {
+      "remix-phase-1/task71.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract OnlyOwner {\r\n    address public owner;\r\n\r\n    constructor() { // Set the deployer as the owner\r\n        owner = msg.sender;\r\n    }\r\n\r\n    modifier onlyOwner() { // Modifier checks if caller is the owner\r\n        require(msg.sender == owner, \"Not the owner\"); \r\n        _; // Function runs here\r\n    }\r\n\r\n    function changeOwner(address _newOwner) public onlyOwner { // Only the owner can call this function\r\n        owner = _newOwner;\r\n    }\r\n}",
+        "file": "remix-phase-1/task71.sol"
       }
     }
   }
