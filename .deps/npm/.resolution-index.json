@@ -590,5 +590,13 @@
         "file": "remix-phase-1/task74.sol"
       }
     }
+  },
+  "remix-phase-1/task75.sol": {
+    "__sources__": {
+      "remix-phase-1/task75.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract beforeModifier {\r\n    uint public number;\r\n\r\n    modifier setBefore() {\r\n        number = 10; // this run before the function\r\n        _; // Function body runs here\r\n    }\r\n\r\n    function test() public setBefore {\r\n        number = 20; // This happerns after number = 10\r\n    }\r\n}",
+        "file": "remix-phase-1/task75.sol"
+      }
+    }
   }
 }
