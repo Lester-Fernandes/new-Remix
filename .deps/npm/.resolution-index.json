@@ -582,5 +582,13 @@
         "file": "remix-phase-1/task73.sol"
       }
     }
+  },
+  "remix-phase-1/task74.sol": {
+    "__sources__": {
+      "remix-phase-1/task74.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract modifierOrder {\r\n    address public owner;\r\n    bool public active = true;\r\n\r\n    constructor() {\r\n        owner = msg.sender;\r\n    }\r\n\r\n    modifier first() { // This happens first\r\n        require(active, \"Contract is inactive\");\r\n        _;\r\n    }\r\n\r\n    modifier secound() { // This happens second\r\n        require(msg.sender == owner, \"Not the owner\");\r\n        _;\r\n    }\r\n\r\n    function test() public first secound {} // first runs before second\r\n}",
+        "file": "remix-phase-1/task74.sol"
+      }
+    }
   }
 }
