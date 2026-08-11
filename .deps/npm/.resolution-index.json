@@ -542,5 +542,13 @@
         "file": "remix-phase-1/task68.sol"
       }
     }
+  },
+  "remix-phase-1/task69.sol": {
+    "__sources__": {
+      "remix-phase-1/task69.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract ReplaceStruct {\r\n    struct User {\r\n        string name;\r\n        uint age;\r\n    }\r\n\r\n    User public user;\r\n\r\n    function setUser(string memory _name, uint _age) public {\r\n        user = User(_name, _age); // Replace the entire struct \r\n    }\r\n}",
+        "file": "remix-phase-1/task69.sol"
+      }
+    }
   }
 }
