@@ -1,0 +1,71 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "change",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task80.sol": "VulnerableModifier"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task80.sol": {
+			"keccak256": "0xe7c047324bbc0adb2fb2c8a5ad027ac243e475bb4af5f3f57073ce14ccbbdfde",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://59b000b90ffffbaa35faed35fb1e57dffbd3323a1b2e880cc95945a22a59b3ea",
+				"dweb:/ipfs/QmdhVsXh1LZtimo8Fc1HTonuAQmnEB5zotCkVTWduTN6RW"
+			]
+		}
+	},
+	"version": 1
+}

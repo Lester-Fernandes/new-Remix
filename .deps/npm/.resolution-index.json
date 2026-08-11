@@ -630,5 +630,13 @@
         "file": "remix-phase-1/task79.sol"
       }
     }
+  },
+  "remix-phase-1/task80.sol": {
+    "__sources__": {
+      "remix-phase-1/task80.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract VulnerableModifier {\r\n    address public owner;\r\n\r\n    constructor() {\r\n        owner = msg.sender;\r\n    }\r\n\r\n    modifier wrongOwner() {\r\n        require(msg.sender != owner, \"owner cannot call\"); // This checks that the caller is Not the owner\r\n\r\n        _;\r\n    }\r\n\r\n    function change() public wrongOwner { // This function is now available to non-owner\r\n      \r\n    }\r\n}",
+        "file": "remix-phase-1/task80.sol"
+      }
+    }
   }
 }
