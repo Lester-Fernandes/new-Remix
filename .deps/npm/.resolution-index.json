@@ -614,5 +614,13 @@
         "file": "remix-phase-1/task77.sol"
       }
     }
+  },
+  "remix-phase-1/task78.sol": {
+    "__sources__": {
+      "remix-phase-1/task78.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract parameterModifier {\r\n    uint public minimum;\r\n\r\n    constructor () {\r\n        minimum = 10;\r\n    }\r\n\r\n    modifier greaterThan(uint _number) { // Modifier accepts a number\r\n        require(_number >= minimum, \"Number is too small\");\r\n\r\n        _;\r\n    }\r\n\r\n    function checkNumber(uint _number) public greaterThan(_number) returns(string memory)\r\n    {\r\n        return \"Number is vaid\";\r\n    }\r\n}",
+        "file": "remix-phase-1/task78.sol"
+      }
+    }
   }
 }
