@@ -566,5 +566,13 @@
         "file": "remix-phase-1/task71.sol"
       }
     }
+  },
+  "remix-phase-1/task72.sol": {
+    "__sources__": {
+      "remix-phase-1/task72.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract restrictedFunction {\r\n    address public owner;\r\n\r\n    constructor() {\r\n        owner = msg.sender;\r\n    }\r\n\r\n    modifier onlyOwner() {\r\n        require(msg.sender == owner, \"Only owner allowed\"); // Only owner can continue\r\n        _;\r\n    }\r\n\r\n    function secretFunction() public onlyOwner returns(string memory) {\r\n        return \"You are the owner\";\r\n    }\r\n}",
+        "file": "remix-phase-1/task72.sol"
+      }
+    }
   }
 }
