@@ -534,5 +534,13 @@
         "file": "remix-phase-1/task67.sol"
       }
     }
+  },
+  "remix-phase-1/task68.sol": {
+    "__sources__": {
+      "remix-phase-1/task68.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract nestedStruct {\r\n    struct AddressInfo { // Address information\r\n        string city;\r\n        uint pin;\r\n    }\r\n\r\n    struct User { // User contrains AddressInfo\r\n        string name;\r\n        uint age;\r\n        AddressInfo addressInfo;\r\n    }\r\n\r\n    User public user;\r\n\r\n    function setUser(string memory _name, uint _age, string memory _city, uint _pin) public {\r\n        user = User(_name, _age, AddressInfo(_city, _pin));\r\n    }\r\n}",
+        "file": "remix-phase-1/task68.sol"
+      }
+    }
   }
 }

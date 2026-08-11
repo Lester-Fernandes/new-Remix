@@ -1,0 +1,109 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_age",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_city",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_pin",
+						"type": "uint256"
+					}
+				],
+				"name": "setUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "user",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "age",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "city",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "pin",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct nestedStruct.AddressInfo",
+						"name": "addressInfo",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task68.sol": "nestedStruct"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task68.sol": {
+			"keccak256": "0xab3a4d68f2e983e31628b1ae886f5c4e0bb7acef5c97925e3a873e991a34c78a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://00550a776cd896ad066f71181f1d8e90c90646515576ed474faca45ae3d4d022",
+				"dweb:/ipfs/QmXFqPXWa1Nnfmi4vhEB4iwEYEg2DMUNk9zPmNs4ZoJbzX"
+			]
+		}
+	},
+	"version": 1
+}
