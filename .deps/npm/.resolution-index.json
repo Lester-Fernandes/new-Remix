@@ -518,5 +518,13 @@
         "file": "remix-phase-1/task65.sol"
       }
     }
+  },
+  "remix-phase-1/task66.sol": {
+    "__sources__": {
+      "remix-phase-1/task66.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract defaultStruct {\r\n    struct User {\r\n        string name;\r\n        uint age;\r\n        bool active;\r\n    }\r\n\r\n    User public user; // Struct is created but no values are assigned\r\n}",
+        "file": "remix-phase-1/task66.sol"
+      }
+    }
   }
 }
