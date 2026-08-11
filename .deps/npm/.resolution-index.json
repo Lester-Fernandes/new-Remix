@@ -598,5 +598,13 @@
         "file": "remix-phase-1/task75.sol"
       }
     }
+  },
+  "remix-phase-1/task76.sol": {
+    "__sources__": {
+      "remix-phase-1/task76.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract afterModifier {\r\n    uint public number;\r\n\r\n    modifier checkAfter() {\r\n        _; // Function runs first\r\n\r\n        number = 100; // This runs after the function\r\n    }\r\n\r\n    function test() public checkAfter { // function changes number first\r\n        number = 50;\r\n    }\r\n}",
+        "file": "remix-phase-1/task76.sol"
+      }
+    }
   }
 }
