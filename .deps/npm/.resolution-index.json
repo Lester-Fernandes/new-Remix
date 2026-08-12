@@ -639,14 +639,6 @@
       }
     }
   },
-  "remix-phase-1/task81.sol": {
-    "__sources__": {
-      "remix-phase-1/task81.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract ReceiveExample {\r\n    receive() external payable { // receive() runs when ETH is sent and there is No calldata\r\n\r\n     }\r\n\r\n     function getBalance() public view returns (uint) { // Check contract balance\r\n        return address(this).balance;\r\n     }\r\n}",
-        "file": "remix-phase-1/task81.sol"
-      }
-    }
-  },
   "remix-phase-1/task82.sol": {
     "__sources__": {
       "remix-phase-1/task82.sol": {
@@ -660,6 +652,22 @@
       "remix-phase-1/task83.sol": {
         "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract BothFunction {\r\n    receive() external payable { // Runs when ETH is send + calldata is empty\r\n\r\n    }\r\n\r\n    fallback() external payable { // Runs when: calldata does not match a function\r\n\r\n    }\r\n}",
         "file": "remix-phase-1/task83.sol"
+      }
+    }
+  },
+  "remix-phase-1/task81.sol": {
+    "__sources__": {
+      "remix-phase-1/task81.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract ReceiveExample {\r\n    receive() external payable { // receive() runs when ETH is sent and there is No calldata\r\n\r\n     }\r\n\r\n     function getBalance() public view returns (uint) { // Check contract balance\r\n        return address(this).balance;\r\n     }\r\n}",
+        "file": "remix-phase-1/task81.sol"
+      }
+    }
+  },
+  "remix-phase-1/task84.sol": {
+    "__sources__": {
+      "remix-phase-1/task84.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract FallbackReceive {\r\n    fallback() external payable { // payable fallback can receive ETH\r\n\r\n    }\r\n\r\n    function getBalance() public view returns (uint) {\r\n        return address(this).balance;\r\n    }\r\n}",
+        "file": "remix-phase-1/task84.sol"
       }
     }
   }
