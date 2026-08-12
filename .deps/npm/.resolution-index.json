@@ -670,5 +670,13 @@
         "file": "remix-phase-1/task84.sol"
       }
     }
+  },
+  "remix-phase-1/task85.sol": {
+    "__sources__": {
+      "remix-phase-1/task85.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract NoFallback {\r\n    function hello() public pure returns (string memory) { // Only a normaal function exists\r\n        return \"Hello World\";\r\n    }\r\n}",
+        "file": "remix-phase-1/task85.sol"
+      }
+    }
   }
 }
