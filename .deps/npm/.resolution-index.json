@@ -638,5 +638,13 @@
         "file": "remix-phase-1/task80.sol"
       }
     }
+  },
+  "remix-phase-1/task81.sol": {
+    "__sources__": {
+      "remix-phase-1/task81.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract ReceiveExample {\r\n    receive() external payable { // receive() runs when ETH is sent and there is No calldata\r\n\r\n     }\r\n\r\n     function getBalance() public view returns (uint) { // Check contract balance\r\n        return address(this).balance;\r\n     }\r\n}",
+        "file": "remix-phase-1/task81.sol"
+      }
+    }
   }
 }
