@@ -1,0 +1,63 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "randomcall",
+				"type": "event"
+			},
+			{
+				"stateMutability": "nonpayable",
+				"type": "fallback"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task87.sol": "randomcalldata"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task87.sol": {
+			"keccak256": "0xe9896039d138deaeb9b6054bdb2bc28de156fe9eea28fcd1ba1932a3b34f158b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b84ba4eae4dbc0082fce36392e0172965b21ba230db002e2a0ddd78cffbccf5c",
+				"dweb:/ipfs/QmTpaawdw6xNbFRSj8qAPHH7ZQubW8FWpm5eWcBUv2ceFh"
+			]
+		}
+	},
+	"version": 1
+}

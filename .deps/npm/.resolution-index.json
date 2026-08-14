@@ -686,5 +686,13 @@
         "file": "remix-phase-1/task86.sol"
       }
     }
+  },
+  "remix-phase-1/task87.sol": {
+    "__sources__": {
+      "remix-phase-1/task87.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract randomcalldata {\r\n    event randomcall(bytes data);\r\n\r\n    fallback() external {\r\n        emit randomcall(msg.data); // Save the calldata in the event\r\n    }\r\n\r\n}",
+        "file": "remix-phase-1/task87.sol"
+      }
+    }
   }
 }
