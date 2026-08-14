@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "received",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task88.sol": "emptycalldata"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task88.sol": {
+			"keccak256": "0xf347d3cce9c957991e4e0b4783be05510a9cb42629785092dfba3e19d9f47878",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d1f6727bc2901413853111dbb52d4978a70f32f7ed22460a85b7259e16f7f88d",
+				"dweb:/ipfs/Qmb3oAausCzt8Prg9GvmLiHwdhogca6kZtkMVnk8YSCiA9"
+			]
+		}
+	},
+	"version": 1
+}

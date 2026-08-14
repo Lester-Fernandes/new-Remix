@@ -694,5 +694,13 @@
         "file": "remix-phase-1/task87.sol"
       }
     }
+  },
+  "remix-phase-1/task88.sol": {
+    "__sources__": {
+      "remix-phase-1/task88.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract emptycalldata {\r\n    event received(address sender, uint amount);\r\n\r\n    receive() external payable { // runs when ETH is received with empty calldata\r\n        emit received(msg.sender, msg.value);\r\n    }\r\n}",
+        "file": "remix-phase-1/task88.sol"
+      }
+    }
   }
 }
