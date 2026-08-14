@@ -702,5 +702,13 @@
         "file": "remix-phase-1/task88.sol"
       }
     }
+  },
+  "remix-phase-1/task89.sol": {
+    "__sources__": {
+      "remix-phase-1/task89.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract payablefallback {\r\n    fallback() external payable { // Payable fallback can receive ETH\r\n\r\n    }\r\n\r\n    function getbalance() public view returns (uint) {\r\n        return address(this).balance;\r\n    }\r\n}",
+        "file": "remix-phase-1/task89.sol"
+      }
+    }
   }
 }

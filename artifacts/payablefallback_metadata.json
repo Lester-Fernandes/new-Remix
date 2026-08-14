@@ -1,0 +1,63 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "getbalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task89.sol": "payablefallback"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task89.sol": {
+			"keccak256": "0x18c7a0909d50c95c34df1b97a2af4911e3bf8590b57f0fb6790f6a3425c1e920",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1e9fabee6f5ffb1ed878930e50650676cf80f6bee1f2c19c4f288c9c2f31b8bd",
+				"dweb:/ipfs/QmctaUkhbDjbYtw4AqNURctnuzrq57mgqzpgT3NT5Ri3yY"
+			]
+		}
+	},
+	"version": 1
+}
