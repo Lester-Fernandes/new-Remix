@@ -710,5 +710,13 @@
         "file": "remix-phase-1/task89.sol"
       }
     }
+  },
+  "remix-phase-1/task90.sol": {
+    "__sources__": {
+      "remix-phase-1/task90.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract nonpayablefallback {\r\n    fallback() external { // not payable\r\n\r\n    }\r\n}",
+        "file": "remix-phase-1/task90.sol"
+      }
+    }
   }
 }

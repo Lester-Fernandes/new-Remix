@@ -1,0 +1,50 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"stateMutability": "nonpayable",
+				"type": "fallback"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task90.sol": "nonpayablefallback"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task90.sol": {
+			"keccak256": "0xe8f2a6f9f14b05847fc31e3c077ac3ddd3a28ccb62a98a5618b32fb6681c58b6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dda5ba1af140611bfc1856058ce711ee19c11d716063a38ff616cc5290211eef",
+				"dweb:/ipfs/QmdX8vfUX7nRKPbXxZW7h9waVWy5SGBmAGAp1Q3VM7oVow"
+			]
+		}
+	},
+	"version": 1
+}
