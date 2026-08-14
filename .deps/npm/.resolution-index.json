@@ -559,11 +559,43 @@
       }
     }
   },
-  "remix-phase-1/task71.sol": {
+  "remix-phase-1/task82.sol": {
     "__sources__": {
-      "remix-phase-1/task71.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract OnlyOwner {\r\n    address public owner;\r\n\r\n    constructor() { // Set the deployer as the owner\r\n        owner = msg.sender;\r\n    }\r\n\r\n    modifier onlyOwner() { // Modifier checks if caller is the owner\r\n        require(msg.sender == owner, \"Not the owner\"); \r\n        _; // Function runs here\r\n    }\r\n\r\n    function changeOwner(address _newOwner) public onlyOwner { // Only the owner can call this function\r\n        owner = _newOwner;\r\n    }\r\n}",
-        "file": "remix-phase-1/task71.sol"
+      "remix-phase-1/task82.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract FallbackExample { // Runs when the contract receives \r\n    fallback() external { \r\n        \r\n    }\r\n}",
+        "file": "remix-phase-1/task82.sol"
+      }
+    }
+  },
+  "remix-phase-1/task83.sol": {
+    "__sources__": {
+      "remix-phase-1/task83.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract BothFunction {\r\n    receive() external payable { // Runs when ETH is send + calldata is empty\r\n\r\n    }\r\n\r\n    fallback() external payable { // Runs when: calldata does not match a function\r\n\r\n    }\r\n}",
+        "file": "remix-phase-1/task83.sol"
+      }
+    }
+  },
+  "remix-phase-1/task81.sol": {
+    "__sources__": {
+      "remix-phase-1/task81.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract ReceiveExample {\r\n    receive() external payable { // receive() runs when ETH is sent and there is No calldata\r\n\r\n     }\r\n\r\n     function getBalance() public view returns (uint) { // Check contract balance\r\n        return address(this).balance;\r\n     }\r\n}",
+        "file": "remix-phase-1/task81.sol"
+      }
+    }
+  },
+  "remix-phase-1/task84.sol": {
+    "__sources__": {
+      "remix-phase-1/task84.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract FallbackReceive {\r\n    fallback() external payable { // payable fallback can receive ETH\r\n\r\n    }\r\n\r\n    function getBalance() public view returns (uint) {\r\n        return address(this).balance;\r\n    }\r\n}",
+        "file": "remix-phase-1/task84.sol"
+      }
+    }
+  },
+  "remix-phase-1/task85.sol": {
+    "__sources__": {
+      "remix-phase-1/task85.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract NoFallback {\r\n    function hello() public pure returns (string memory) { // Only a normaal function exists\r\n        return \"Hello World\";\r\n    }\r\n}",
+        "file": "remix-phase-1/task85.sol"
       }
     }
   },
@@ -639,43 +671,19 @@
       }
     }
   },
-  "remix-phase-1/task82.sol": {
+  "remix-phase-1/task71.sol": {
     "__sources__": {
-      "remix-phase-1/task82.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract FallbackExample { // Runs when the contract receives \r\n    fallback() external { \r\n        \r\n    }\r\n}",
-        "file": "remix-phase-1/task82.sol"
+      "remix-phase-1/task71.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract OnlyOwner {\r\n    address public owner;\r\n\r\n    constructor() { // Set the deployer as the owner\r\n        owner = msg.sender;\r\n    }\r\n\r\n    modifier onlyOwner() { // Modifier checks if caller is the owner\r\n        require(msg.sender == owner, \"Not the owner\"); \r\n        _; // Function runs here\r\n    }\r\n\r\n    function changeOwner(address _newOwner) public onlyOwner { // Only the owner can call this function\r\n        owner = _newOwner;\r\n    }\r\n}",
+        "file": "remix-phase-1/task71.sol"
       }
     }
   },
-  "remix-phase-1/task83.sol": {
+  "remix-phase-1/task86.sol": {
     "__sources__": {
-      "remix-phase-1/task83.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract BothFunction {\r\n    receive() external payable { // Runs when ETH is send + calldata is empty\r\n\r\n    }\r\n\r\n    fallback() external payable { // Runs when: calldata does not match a function\r\n\r\n    }\r\n}",
-        "file": "remix-phase-1/task83.sol"
-      }
-    }
-  },
-  "remix-phase-1/task81.sol": {
-    "__sources__": {
-      "remix-phase-1/task81.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract ReceiveExample {\r\n    receive() external payable { // receive() runs when ETH is sent and there is No calldata\r\n\r\n     }\r\n\r\n     function getBalance() public view returns (uint) { // Check contract balance\r\n        return address(this).balance;\r\n     }\r\n}",
-        "file": "remix-phase-1/task81.sol"
-      }
-    }
-  },
-  "remix-phase-1/task84.sol": {
-    "__sources__": {
-      "remix-phase-1/task84.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract FallbackReceive {\r\n    fallback() external payable { // payable fallback can receive ETH\r\n\r\n    }\r\n\r\n    function getBalance() public view returns (uint) {\r\n        return address(this).balance;\r\n    }\r\n}",
-        "file": "remix-phase-1/task84.sol"
-      }
-    }
-  },
-  "remix-phase-1/task85.sol": {
-    "__sources__": {
-      "remix-phase-1/task85.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract NoFallback {\r\n    function hello() public pure returns (string memory) { // Only a normaal function exists\r\n        return \"Hello World\";\r\n    }\r\n}",
-        "file": "remix-phase-1/task85.sol"
+      "remix-phase-1/task86.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract FallbackEventt {\r\n    event fallbackcalled(address sernder, uint value); // event used to record fallback calls\r\n\r\n    fallback() external payable { // fallback receives unknow calls\r\n        emit fallbackcalled(msg.sender, msg.value); // Log who called and how much ETH was sent\r\n    }\r\n}",
+        "file": "remix-phase-1/task86.sol"
       }
     }
   }

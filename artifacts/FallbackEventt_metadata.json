@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "sernder",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "fallbackcalled",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task86.sol": "FallbackEventt"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task86.sol": {
+			"keccak256": "0x2bd8c0e82026c6f938f8a856f056d9b4f06b29fab124ce2754878c9ff30d7cd4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://95fbba70c5328cc77b4d5ff6f0875f17716acfc0566dd41cec0c157bc1ba2137",
+				"dweb:/ipfs/QmWMBk7WPmRBTowLkYaXKrcukBPyJSC2qEARMozdiRZgGq"
+			]
+		}
+	},
+	"version": 1
+}
