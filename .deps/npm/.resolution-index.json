@@ -734,5 +734,13 @@
         "file": "remix-phase-1/task92.sol"
       }
     }
+  },
+  "remix-phase-1/task93.sol": {
+    "__sources__": {
+      "remix-phase-1/task93.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract counter {\r\n    uint public count;\r\n\r\n    function increment() public { // Increase by 1 each time\r\n        count++;\r\n    }\r\n}",
+        "file": "remix-phase-1/task93.sol"
+      }
+    }
   }
 }
