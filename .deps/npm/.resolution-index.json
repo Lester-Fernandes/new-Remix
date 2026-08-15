@@ -750,5 +750,13 @@
         "file": "remix-phase-1/task94.sol"
       }
     }
+  },
+  "remix-phase-1/task95.sol": {
+    "__sources__": {
+      "remix-phase-1/task95.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract securewithdraw {\r\n    uint public balance = 100;\r\n\r\n    function withdraw(uint amount) public {\r\n        require(amount <= balance, \"Too much\");\r\n\r\n        balance -= amount;\r\n    }\r\n}",
+        "file": "remix-phase-1/task95.sol"
+      }
+    }
   }
 }
