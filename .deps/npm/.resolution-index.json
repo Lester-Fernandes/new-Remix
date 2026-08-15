@@ -726,5 +726,13 @@
         "file": "remix-phase-1/task91.sol"
       }
     }
+  },
+  "remix-phase-1/task92.sol": {
+    "__sources__": {
+      "remix-phase-1/task92.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract largeUint {\r\n    uint public value; // uint can store maximum 256\r\n\r\n    function setvalue(uint _value) public {\r\n        value = _value;\r\n    }\r\n}",
+        "file": "remix-phase-1/task92.sol"
+      }
+    }
   }
 }
