@@ -774,5 +774,13 @@
         "file": "remix-phase-1/task97.sol"
       }
     }
+  },
+  "remix-phase-1/task98.sol": {
+    "__sources__": {
+      "remix-phase-1/task98.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract Target {\r\n    function whoCalled() public view returns(address) {\r\n        return msg.sender;\r\n    }\r\n}\r\n\r\ncontract Intermediary {\r\n    function callTarget(address target) public view returns(address) {\r\n        return Target(target).whoCalled();\r\n    }\r\n}",
+        "file": "remix-phase-1/task98.sol"
+      }
+    }
   }
 }

@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					}
+				],
+				"name": "callTarget",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-1/task98.sol": "Intermediary"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-1/task98.sol": {
+			"keccak256": "0x466078e7a55f40ebf8b50e0dc428087df49eeecda2250520bbf51aab0f434a51",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7400d20376b02d678d3021adb69e52ca58bfd0f489b1fcfc8cadd8614c19a88d",
+				"dweb:/ipfs/QmXD2TwsjxPuZLMe5eWhE7MHxpQv8X1otcRxfCmQKKNpbr"
+			]
+		}
+	},
+	"version": 1
+}
