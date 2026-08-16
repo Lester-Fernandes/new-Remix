@@ -782,5 +782,13 @@
         "file": "remix-phase-1/task98.sol"
       }
     }
+  },
+  "remix-phase-1/task99.sol": {
+    "__sources__": {
+      "remix-phase-1/task99.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract streeTest {\r\n    uint public total;\r\n\r\n    function add(uint num) public {\r\n        total += num;\r\n    }\r\n\r\n    function subtract(uint num) public {\r\n        total -= num;\r\n    }\r\n\r\n    function reset() public {\r\n        total = 0;\r\n    }\r\n}",
+        "file": "remix-phase-1/task99.sol"
+      }
+    }
   }
 }
