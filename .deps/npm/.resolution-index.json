@@ -758,5 +758,13 @@
         "file": "remix-phase-1/task95.sol"
       }
     }
+  },
+  "remix-phase-1/task96.sol": {
+    "__sources__": {
+      "remix-phase-1/task96.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract logicflaw {\r\n    mapping(address => uint) public balances;\r\n\r\n    function deposit() public payable {\r\n        balances[msg.sender] += msg.value;\r\n    }\r\n\r\n    function withdraw() public {\r\n        uint amount = balances[msg.sender];\r\n\r\n        payable(msg.sender).transfer(amount); // BAD: send ETH first\r\n\r\n        balances[msg.sender] = 0; // state update later\r\n    }\r\n}",
+        "file": "remix-phase-1/task96.sol"
+      }
+    }
   }
 }
