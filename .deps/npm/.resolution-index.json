@@ -766,5 +766,13 @@
         "file": "remix-phase-1/task96.sol"
       }
     }
+  },
+  "remix-phase-1/task97.sol": {
+    "__sources__": {
+      "remix-phase-1/task97.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract anyoneWithdraw {\r\n    function deposit() public payable{} // deposit ETH\r\n\r\n    function withdraw() public { // anyone can steal all ETH\r\n        payable(msg.sender).transfer(address(this).balance);\r\n    }\r\n\r\n    function getbalance() public view returns(uint){\r\n        return address(this).balance;\r\n    }\r\n}",
+        "file": "remix-phase-1/task97.sol"
+      }
+    }
   }
 }
