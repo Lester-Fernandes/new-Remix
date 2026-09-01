@@ -719,11 +719,11 @@
       }
     }
   },
-  "remix-phase-1/task91.sol": {
+  "remix-phase-1/task100.sol": {
     "__sources__": {
-      "remix-phase-1/task91.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract zeroValues {\r\n    uint public number;\r\n    address public user;\r\n\r\n    function setdata(uint _number, address _user) public { // This function stores the values\r\n        number = _number;\r\n        user = _user;\r\n    }\r\n}",
-        "file": "remix-phase-1/task91.sol"
+      "remix-phase-1/task100.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract badBank {\r\n    mapping(address => uint) public balances;\r\n\r\n    function deposit() public payable {\r\n        balances[msg.sender] += msg.value;\r\n    }\r\n\r\n    function withdrawAll(address user) public { // the function lets anyone choose any user's address\r\n        uint amount = balances[user];\r\n\r\n        balances[user] = 0;\r\n\r\n        payable(msg.sender).transfer(amount);\r\n    }\r\n}",
+        "file": "remix-phase-1/task100.sol"
       }
     }
   },
@@ -791,11 +791,51 @@
       }
     }
   },
-  "remix-phase-1/task100.sol": {
+  "remix-phase-1/task91.sol": {
     "__sources__": {
-      "remix-phase-1/task100.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract badBank {\r\n    mapping(address => uint) public balances;\r\n\r\n    function deposit() public payable {\r\n        balances[msg.sender] += msg.value;\r\n    }\r\n\r\n    function withdrawAll(address user) public { // the function lets anyone choose any user's address\r\n        uint amount = balances[user];\r\n\r\n        balances[user] = 0;\r\n\r\n        payable(msg.sender).transfer(amount);\r\n    }\r\n}",
-        "file": "remix-phase-1/task100.sol"
+      "remix-phase-1/task91.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.10;\r\n\r\ncontract zeroValues {\r\n    uint public number;\r\n    address public user;\r\n\r\n    function setdata(uint _number, address _user) public { // This function stores the values\r\n        number = _number;\r\n        user = _user;\r\n    }\r\n}",
+        "file": "remix-phase-1/task91.sol"
+      }
+    }
+  },
+  "remix-phase-2/task2.sol": {
+    "__sources__": {
+      "remix-phase-2/task2.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract updateuint {\r\n\r\nuint public number;\r\nuint public previousNumber;\r\n\r\nfunction update(uint newNumber) public { // The old value is stored before the new value replaces it\r\n    previousNumber = number;\r\n\r\n    number = newNumber;\r\n}\r\n\r\n}",
+        "file": "remix-phase-2/task2.sol"
+      }
+    }
+  },
+  "remix-phase-2/task1.sol": {
+    "__sources__": {
+      "remix-phase-2/task1.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract storeuint {\r\n    uint private number; // number is the state variable\r\n\r\n    function save(uint256 value) external { // save modifies the value\r\n        number = value;\r\n    }\r\n\r\n    function read() external view returns (uint256) { // read retrives the stored value\r\n        return number;\r\n    }\r\n\r\n}",
+        "file": "remix-phase-2/task1.sol"
+      }
+    }
+  },
+  "remix-phase-2/task3.sol": {
+    "__sources__": {
+      "remix-phase-2/task3.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract addresstask {\r\n\r\n    address public storeAddress;\r\n\r\n    address public owner;\r\n\r\n    constructor() { // constructor only deploy only onces\r\n        owner = msg.sender;\r\n\r\n        storeAddress = msg.sender;\r\n    }\r\n\r\n    function changaddress(address newAddress) external {\r\n        require(msg.sender == owner,\"Not the Owner\"); // prevents other users from changing the address\r\n        require(msg.sender != address(0),\"Zero address is rejected\"); // prevents storing the zero address\r\n\r\n        storeAddress = newAddress;\r\n    }\r\n\r\n    function getAddress() external view returns (address) {\r\n        return storeAddress;\r\n    }\r\n\r\n}",
+        "file": "remix-phase-2/task3.sol"
+      }
+    }
+  },
+  "remix-phase-2/task4.sol": {
+    "__sources__": {
+      "remix-phase-2/task4.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract storebool {\r\n    bool public isActive;\r\n\r\n    constructor() {\r\n        isActive = false;\r\n    }\r\n\r\n    function status(bool newState) external {\r\n        isActive = newState;\r\n    }\r\n\r\n    function toggleState() external {\r\n        isActive = !isActive;\r\n    }\r\n}",
+        "file": "remix-phase-2/task4.sol"
+      }
+    }
+  },
+  "remix-phase-2/task5.sol": {
+    "__sources__": {
+      "remix-phase-2/task5.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract userBalance {\r\n    mapping(address => uint256) public balance;\r\n\r\n    function increaseBalance(uint256 amount) external {\r\n        require(amount > balance[msg.sender],\"value must increase\");\r\n\r\n        balance[msg.sender] = amount;\r\n    }\r\n\r\n    function getBalance(address user) external view returns (uint256) {\r\n        return balance[user];\r\n    }\r\n}",
+        "file": "remix-phase-2/task5.sol"
       }
     }
   }

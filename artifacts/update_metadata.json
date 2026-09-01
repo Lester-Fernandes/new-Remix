@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-2/task2.sol": "update"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-2/task2.sol": {
+			"keccak256": "0x89aef21dd6a1eeafeb4ea4e6c4b65dc16f26fac76e2e6fcbbed427bdaec6d370",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bde62bb42dfbcc6afbde7767f3b6a804f096bcfba95f9e66f0ed7e22c157a7bf",
+				"dweb:/ipfs/QmRKCYXHM5zMYqHznPsEGTqBCqmj2CvxiC9jhHyd9Q3Zmz"
+			]
+		}
+	},
+	"version": 1
+}
