@@ -1,26 +1,47 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-contract numberArray {
-    uint256[] public number;
+/*
+contract ArrayStorageVul {
 
-    function addNumber(uint256 value) external {
-        number.push(value);
+    uint256[] public numbers;
+
+    function addNumber(uint256 _number) public {
+        numbers.push(_number);
     }
 
-    function removeNumber() external {
-        require(number.length > 0, "Array is empty");
-
-        number.pop();
+    function getNumber(uint256 _index)
+        public
+        view
+        returns (uint256)
+    {
+        return numbers[_index];
     }
 
-    function getLength() external view returns (uint256) {
-        return number.length;
+    function getLength() public view returns (uint256) {
+        return numbers.length;
+    }
+}
+*/
+
+contract ArrayStorage {
+    uint256[] public numbers;
+
+    function addNumber(uint256 _number) public {
+        numbers.push(_number); // Adds a new value to the end of the array
     }
 
-    function getNumber(uint256 index) external view returns (uint256) {
-        require(index < number.length, "Invalid index");
+    function removeNumber() public {
+        require(numbers.length > 0, "Array is empty"); // The array should contain at least one element
 
-        return number[index];
+        numbers.pop(); // Remove the last element
+    }
+
+    function getNumber(uint256 _index) public view returns (uint256) {
+        return numbers[_index];
+    }
+
+    function getLength() public view returns (uint256) {
+        return numbers.length;
     }
 }
