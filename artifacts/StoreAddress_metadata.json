@@ -6,19 +6,31 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "getAddress",
+				"outputs": [
 					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
 					}
 				],
-				"name": "balance",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -28,32 +40,26 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "user",
+						"name": "_newAddress",
 						"type": "address"
 					}
 				],
-				"name": "getBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "increaseBalance",
+				"name": "storeAddress",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "userAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -70,7 +76,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task5.sol": "userBalance"
+			"remix-phase-2/task3.sol": "StoreAddress"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -84,12 +90,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task5.sol": {
-			"keccak256": "0xa1b3b56b8812cd3ef1e860d48cd0f5faa73fb89227bd2009d81b6a0f8efabda2",
+		"remix-phase-2/task3.sol": {
+			"keccak256": "0xc2807e9b214e9aee6b2e3f0ad46dde8dc7bce8692e33a412d4c6d70ef2977eab",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0a329e55433ad85b9d62cb8efe4f17bbf7084cbdf80abbc8f890b998c062ee08",
-				"dweb:/ipfs/QmbsqR2URuuz9F5ky6LHSYJKb7nQZvYbwgYoeMh5TAsfDz"
+				"bzz-raw://bbd8890929f543fdacc98d0c636cde002c084dda1be9cb2762c4d5c89722597d",
+				"dweb:/ipfs/QmP5ZiUeavpx8YfUaXVDuygYQtLdpMinnMyHTxsuwxUzQg"
 			]
 		}
 	},

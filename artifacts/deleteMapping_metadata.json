@@ -9,16 +9,29 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "add",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "",
 						"type": "address"
 					}
 				],
-				"name": "balance",
+				"name": "listed",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "bool",
 						"name": "",
-						"type": "uint256"
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -32,26 +45,7 @@
 						"type": "address"
 					}
 				],
-				"name": "getBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "increaseBalance",
+				"name": "remove",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -70,7 +64,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task5.sol": "userBalance"
+			"remix-phase-2/task10.sol": "deleteMapping"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -84,12 +78,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task5.sol": {
-			"keccak256": "0xa1b3b56b8812cd3ef1e860d48cd0f5faa73fb89227bd2009d81b6a0f8efabda2",
+		"remix-phase-2/task10.sol": {
+			"keccak256": "0xccda2bdaf36ff41fac9d7b206f116f9a86e01c11ce3eb753998e1ad8be7e5541",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0a329e55433ad85b9d62cb8efe4f17bbf7084cbdf80abbc8f890b998c062ee08",
-				"dweb:/ipfs/QmbsqR2URuuz9F5ky6LHSYJKb7nQZvYbwgYoeMh5TAsfDz"
+				"bzz-raw://bc65d2113ea1c4fccead854a3c18139fcd3e5ff7f2cd5c4f215f5b09f1000d0a",
+				"dweb:/ipfs/QmbPJLw6C3jQwrCM6xSbB5AsM5HdB1PXuTMVg1pRokPpjd"
 			]
 		}
 	},

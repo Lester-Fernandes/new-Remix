@@ -8,52 +8,59 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "balance",
-				"outputs": [
-					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "user",
-						"type": "address"
-					}
-				],
-				"name": "getBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "increaseBalance",
+				"name": "addnumber",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "deleteItem",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLength",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "number",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -70,7 +77,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task5.sol": "userBalance"
+			"remix-phase-2/task11.sol": "deleteArray"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -84,12 +91,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task5.sol": {
-			"keccak256": "0xa1b3b56b8812cd3ef1e860d48cd0f5faa73fb89227bd2009d81b6a0f8efabda2",
+		"remix-phase-2/task11.sol": {
+			"keccak256": "0x256f0a21836a87eb1dbcbb3acdbf6810d790f8214acc9828b3a8b3b16d233783",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0a329e55433ad85b9d62cb8efe4f17bbf7084cbdf80abbc8f890b998c062ee08",
-				"dweb:/ipfs/QmbsqR2URuuz9F5ky6LHSYJKb7nQZvYbwgYoeMh5TAsfDz"
+				"bzz-raw://4c7f7fe999dd2a7198ba08cb43a5d39d23c41b68b0cf40f0033532064d649836",
+				"dweb:/ipfs/Qmf1d93ZxVXXmw9F2Lz1WCiCv3crbmkq7sQSdV5pgJkXNw"
 			]
 		}
 	},

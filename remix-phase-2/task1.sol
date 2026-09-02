@@ -1,15 +1,38 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-contract storeuint {
-    uint private number; // number is the state variable
+/*
+contract StoreUintVul {
 
-    function save(uint256 value) external { // save modifies the value
-        number = value;
+    uint256 public number;
+
+    function storeNumber(uint256 _newNumber) public {
+        number = _newNumber;
     }
 
-    function read() external view returns (uint256) { // read retrives the stored value
+    function getNumber() public view returns (uint256) {
         return number;
     }
+}
 
+*/
+
+contract StoreUint {
+    uint256 public number; // Store the number permanenty
+
+    address public owner; // Address that is allowed to modifer the number
+
+    constructor() { // Runs only once when the contract is deployed
+        owner = msg.sender;
+    }
+
+    function storeNumber(uint256 _newNumber) public { 
+        require(msg.sender == owner,"Only the owner can update"); // Only the owner can update the number;
+
+        number = _newNumber;
+    }
+
+    function getNumber() public view returns (uint256) {
+        return number;
+    }
 }

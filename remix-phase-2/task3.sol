@@ -1,27 +1,40 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-contract addresstask {
+/*
+contract StoreAddressVul {
 
-    address public storeAddress;
+    address public userAddress;
+
+    function storeAddress(address _newAddress) public {
+        userAddress = _newAddress;
+    }
+
+    function getAddress() public view returns (address) {
+        return userAddress;
+    }
+}
+
+*/
+
+contract StoreAddress {
+    address public userAddress;
 
     address public owner;
 
-    constructor() { // constructor only deploy only onces
+    constructor() {
         owner = msg.sender;
-
-        storeAddress = msg.sender;
     }
 
-    function changaddress(address newAddress) external {
-        require(msg.sender == owner,"Not the Owner"); // prevents other users from changing the address
-        require(msg.sender != address(0),"Zero address is rejected"); // prevents storing the zero address
+    function storeAddress(address _newAddress) public {
+        require(msg.sender == owner,"Only the owner can update the address"); // only the owner can update
 
-        storeAddress = newAddress;
+        require(_newAddress != address(0),"Zero address not allowed"); // Zero address is rejected 
+
+        userAddress = _newAddress;
     }
 
-    function getAddress() external view returns (address) {
-        return storeAddress;
+    function getAddress() public view returns (address) {
+        return userAddress;
     }
-
 }

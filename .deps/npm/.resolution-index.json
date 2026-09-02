@@ -799,46 +799,6 @@
       }
     }
   },
-  "remix-phase-2/task2.sol": {
-    "__sources__": {
-      "remix-phase-2/task2.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract updateuint {\r\n\r\nuint public number;\r\nuint public previousNumber;\r\n\r\nfunction update(uint newNumber) public { // The old value is stored before the new value replaces it\r\n    previousNumber = number;\r\n\r\n    number = newNumber;\r\n}\r\n\r\n}",
-        "file": "remix-phase-2/task2.sol"
-      }
-    }
-  },
-  "remix-phase-2/task1.sol": {
-    "__sources__": {
-      "remix-phase-2/task1.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract storeuint {\r\n    uint private number; // number is the state variable\r\n\r\n    function save(uint256 value) external { // save modifies the value\r\n        number = value;\r\n    }\r\n\r\n    function read() external view returns (uint256) { // read retrives the stored value\r\n        return number;\r\n    }\r\n\r\n}",
-        "file": "remix-phase-2/task1.sol"
-      }
-    }
-  },
-  "remix-phase-2/task4.sol": {
-    "__sources__": {
-      "remix-phase-2/task4.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract storebool {\r\n    bool public isActive;\r\n\r\n    constructor() {\r\n        isActive = false;\r\n    }\r\n\r\n    function status(bool newState) external {\r\n        isActive = newState;\r\n    }\r\n\r\n    function toggleState() external {\r\n        isActive = !isActive;\r\n    }\r\n}",
-        "file": "remix-phase-2/task4.sol"
-      }
-    }
-  },
-  "remix-phase-2/task3.sol": {
-    "__sources__": {
-      "remix-phase-2/task3.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract addresstask {\r\n\r\n    address public storeAddress;\r\n\r\n    address public owner;\r\n\r\n    constructor() { // constructor only deploy only onces\r\n        owner = msg.sender;\r\n\r\n        storeAddress = msg.sender;\r\n    }\r\n\r\n    function changaddress(address newAddress) external {\r\n        require(msg.sender == owner,\"Not the Owner\"); // prevents other users from changing the address\r\n        require(msg.sender != address(0),\"Zero address is rejected\"); // prevents storing the zero address\r\n\r\n        storeAddress = newAddress;\r\n    }\r\n\r\n    function getAddress() external view returns (address) {\r\n        return storeAddress;\r\n    }\r\n\r\n}",
-        "file": "remix-phase-2/task3.sol"
-      }
-    }
-  },
-  "remix-phase-2/task5.sol": {
-    "__sources__": {
-      "remix-phase-2/task5.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract userBalance {\r\n    mapping(address => uint256) public balance;\r\n\r\n    function increaseBalance(uint256 amount) external {\r\n        require(amount > balance[msg.sender],\"value must increase\");\r\n\r\n        balance[msg.sender] = amount;\r\n    }\r\n\r\n    function getBalance(address user) external view returns (uint256) {\r\n        return balance[user];\r\n    }\r\n}",
-        "file": "remix-phase-2/task5.sol"
-      }
-    }
-  },
   "remix-phase-2/task6.sol": {
     "__sources__": {
       "remix-phase-2/task6.sol": {
@@ -860,6 +820,70 @@
       "remix-phase-2/task8.sol": {
         "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract LimitedArray {\r\n    uint256[] public number;\r\n\r\n    uint256 public constant MAX_LENGTH = 10;\r\n\r\n    function MultipleValues(uint256 first, uint256 secound, uint256 third) external {\r\n        require(number.length + 3 <= MAX_LENGTH, \"Array limit reached\");\r\n\r\n        number.push(first);\r\n        number.push(secound);\r\n        number.push(third);\r\n    }\r\n\r\n    function getLength() external view returns (uint256) {\r\n        return number.length;\r\n    }\r\n\r\n    function getvalue(uint256 index) external view returns (uint256) {\r\n        require(index < number.length, \"Invalid index\");\r\n\r\n        return number[index];\r\n    }\r\n}",
         "file": "remix-phase-2/task8.sol"
+      }
+    }
+  },
+  "remix-phase-2/task11.sol": {
+    "__sources__": {
+      "remix-phase-2/task11.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract deleteArray {\r\n    uint256[] public number;\r\n\r\n    function addnumber(uint256 value) external {\r\n        number.push(value);\r\n    }\r\n\r\n    function deleteItem(uint256 index) external {\r\n        require(index < number.length,\"Invalid index\");\r\n\r\n        delete number[index];\r\n    }\r\n\r\n    function getLength() external view returns (uint256) {\r\n        return number.length;\r\n    }\r\n}",
+        "file": "remix-phase-2/task11.sol"
+      }
+    }
+  },
+  "remix-phase-2/task10.sol": {
+    "__sources__": {
+      "remix-phase-2/task10.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract deleteMapping {\r\n    mapping(address => bool) public listed;\r\n\r\n    function add(address user) external {\r\n        require(user != address(0),\"Invalid address\");\r\n\r\n        listed[user] = true;\r\n    }\r\n\r\n    function remove(address user) external {\r\n        require(user != address(0),\"Invalid address\");\r\n\r\n        delete listed[user];\r\n    }\r\n\r\n}",
+        "file": "remix-phase-2/task10.sol"
+      }
+    }
+  },
+  "remix-phase-2/task9.sol": {
+    "__sources__": {
+      "remix-phase-2/task9.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract deleteTask {\r\n    uint256 public number;\r\n\r\n    function setNumber(uint256 newNumber) external {\r\n        number = newNumber;\r\n    }\r\n\r\n    function resetNumber() external {\r\n        delete number;\r\n    }\r\n}",
+        "file": "remix-phase-2/task9.sol"
+      }
+    }
+  },
+  "remix-phase-2/task2.sol": {
+    "__sources__": {
+      "remix-phase-2/task2.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract StateOverwriteVul {\r\n\r\n    uint256 public number;\r\n\r\n    function updateNumber(uint256 _newNumber) public {\r\n        number = _newNumber;\r\n    }\r\n\r\n    function getNumber() public view returns (uint256) {\r\n        return number;\r\n    }\r\n}\r\n*/\r\n\r\ncontract StateOverwrite {\r\n    uint256 public number; // Current Value\r\n\r\n    uint256 public previousNumber; // Stores the value before the most recent update\r\n\r\n    function updateNumber(uint256 _newNumber) public { \r\n        previousNumber = number;\r\n\r\n        number = _newNumber;\r\n    }\r\n\r\n    function getNumber() public view returns (uint256) {\r\n        return previousNumber;  \r\n    }\r\n}",
+        "file": "remix-phase-2/task2.sol"
+      }
+    }
+  },
+  "remix-phase-2/task1.sol": {
+    "__sources__": {
+      "remix-phase-2/task1.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract StoreUintVul {\r\n\r\n    uint256 public number;\r\n\r\n    function storeNumber(uint256 _newNumber) public {\r\n        number = _newNumber;\r\n    }\r\n\r\n    function getNumber() public view returns (uint256) {\r\n        return number;\r\n    }\r\n}\r\n\r\n*/\r\n\r\ncontract StoreUint {\r\n    uint256 public number; // Store the number permanenty\r\n\r\n    address public owner; // Address that is allowed to modifer the number\r\n\r\n    constructor() { // Runs only once when the contract is deployed\r\n        owner = msg.sender;\r\n    }\r\n\r\n    function storeNumber(uint256 _newNumber) public { \r\n        require(msg.sender == owner,\"Only the owner can update\"); // Only the owner can update the number;\r\n\r\n        number = _newNumber;\r\n    }\r\n\r\n    function getNumber() public view returns (uint256) {\r\n        return number;\r\n    }\r\n}",
+        "file": "remix-phase-2/task1.sol"
+      }
+    }
+  },
+  "remix-phase-2/task3.sol": {
+    "__sources__": {
+      "remix-phase-2/task3.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract StoreAddressVul {\r\n\r\n    address public userAddress;\r\n\r\n    function storeAddress(address _newAddress) public {\r\n        userAddress = _newAddress;\r\n    }\r\n\r\n    function getAddress() public view returns (address) {\r\n        return userAddress;\r\n    }\r\n}\r\n\r\n*/\r\n\r\ncontract StoreAddress {\r\n    address public userAddress;\r\n\r\n    address public owner;\r\n\r\n    constructor() {\r\n        owner = msg.sender;\r\n    }\r\n\r\n    function storeAddress(address _newAddress) public {\r\n        require(msg.sender == owner,\"Only the owner can update the address\"); // only the owner can update\r\n\r\n        require(_newAddress != address(0),\"Zero address not allowed\"); // Zero address is rejected \r\n\r\n        userAddress = _newAddress;\r\n    }\r\n\r\n    function getAddress() public view returns (address) {\r\n        return userAddress;\r\n    }\r\n}",
+        "file": "remix-phase-2/task3.sol"
+      }
+    }
+  },
+  "remix-phase-2/task4.sol": {
+    "__sources__": {
+      "remix-phase-2/task4.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract StoreBooleanVul {\r\n\r\n    bool public isActive;\r\n\r\n    function setStatus(bool _status) public {\r\n        isActive = _status;\r\n    }\r\n\r\n    function getStatus() public view returns (bool) {\r\n        return isActive;\r\n    }\r\n}\r\n*/\r\n\r\ncontract StoreBoolean {\r\n    bool public isActive;\r\n\r\n    address public owner;\r\n\r\n    constructor() {\r\n        owner = msg.sender;\r\n    }\r\n\r\n    function setStatue(bool _status) public {\r\n        require(msg.sender == owner,\"Only the owner can change status\");\r\n\r\n        isActive = _status;\r\n    }\r\n\r\n    function toggleStatus() public {\r\n        require(msg.sender == owner,\"Only the owner can toggle status\");\r\n\r\n        isActive =!isActive;\r\n    }\r\n\r\n    function getStatus() public view returns (bool) {\r\n        return isActive;\r\n    }\r\n}",
+        "file": "remix-phase-2/task4.sol"
+      }
+    }
+  },
+  "remix-phase-2/task5.sol": {
+    "__sources__": {
+      "remix-phase-2/task5.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract UserStorageVul {\r\n\r\n    mapping(address => uint256) public balances;\r\n\r\n    function storeValue(uint256 _amount) public {\r\n        balances[msg.sender] = _amount;\r\n    }\r\n\r\n    function getMyValue() public view returns (uint256) {\r\n        return balances[msg.sender];\r\n    }\r\n}\r\n*/\r\n\r\ncontract userBalance {\r\n    mapping(address => uint256) public balance;\r\n\r\n    function increaseBalance(uint256 amount) external {\r\n        require(amount > balance[msg.sender],\"value must increase\");\r\n\r\n        balance[msg.sender] = amount;\r\n    }\r\n\r\n    function getBalance(address user) external view returns (uint256) {\r\n        return balance[user];\r\n    }\r\n}",
+        "file": "remix-phase-2/task5.sol"
       }
     }
   }

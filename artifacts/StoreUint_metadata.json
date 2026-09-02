@@ -6,14 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "balance",
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "getNumber",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -25,14 +24,8 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "user",
-						"type": "address"
-					}
-				],
-				"name": "getBalance",
+				"inputs": [],
+				"name": "number",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -44,14 +37,27 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "_newNumber",
 						"type": "uint256"
 					}
 				],
-				"name": "increaseBalance",
+				"name": "storeNumber",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -70,7 +76,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task5.sol": "userBalance"
+			"remix-phase-2/task1.sol": "StoreUint"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -84,12 +90,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task5.sol": {
-			"keccak256": "0xa1b3b56b8812cd3ef1e860d48cd0f5faa73fb89227bd2009d81b6a0f8efabda2",
+		"remix-phase-2/task1.sol": {
+			"keccak256": "0xe4a4d7134ebc5c32c1cd31a6fc0c054652b90abcd90d500d464d36bd93a0580c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0a329e55433ad85b9d62cb8efe4f17bbf7084cbdf80abbc8f890b998c062ee08",
-				"dweb:/ipfs/QmbsqR2URuuz9F5ky6LHSYJKb7nQZvYbwgYoeMh5TAsfDz"
+				"bzz-raw://32e4a3c3485eedd2180a6288d7a86eaac2a6e9d75ca543f56427298d281e163a",
+				"dweb:/ipfs/QmX2xs7oXkda6bMcFnRPXpCXG6KRhaCTNT6tWXGhPRwpD3"
 			]
 		}
 	},

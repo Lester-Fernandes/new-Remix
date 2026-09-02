@@ -1,18 +1,43 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-contract storebool {
+/*
+contract StoreBooleanVul {
+
     bool public isActive;
 
+    function setStatus(bool _status) public {
+        isActive = _status;
+    }
+
+    function getStatus() public view returns (bool) {
+        return isActive;
+    }
+}
+*/
+
+contract StoreBoolean {
+    bool public isActive;
+
+    address public owner;
+
     constructor() {
-        isActive = false;
+        owner = msg.sender;
     }
 
-    function status(bool newState) external {
-        isActive = newState;
+    function setStatue(bool _status) public {
+        require(msg.sender == owner,"Only the owner can change status");
+
+        isActive = _status;
     }
 
-    function toggleState() external {
-        isActive = !isActive;
+    function toggleStatus() public {
+        require(msg.sender == owner,"Only the owner can toggle status");
+
+        isActive =!isActive;
+    }
+
+    function getStatus() public view returns (bool) {
+        return isActive;
     }
 }

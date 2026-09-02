@@ -6,14 +6,8 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "balance",
+				"inputs": [],
+				"name": "number",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -25,33 +19,21 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "user",
-						"type": "address"
-					}
-				],
-				"name": "getBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
+				"inputs": [],
+				"name": "resetNumber",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "newNumber",
 						"type": "uint256"
 					}
 				],
-				"name": "increaseBalance",
+				"name": "setNumber",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -70,7 +52,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task5.sol": "userBalance"
+			"remix-phase-2/task9.sol": "deleteTask"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -84,12 +66,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task5.sol": {
-			"keccak256": "0xa1b3b56b8812cd3ef1e860d48cd0f5faa73fb89227bd2009d81b6a0f8efabda2",
+		"remix-phase-2/task9.sol": {
+			"keccak256": "0xbf5eeb0aa20fff99784ff609be09d1aed95e6584c2ecd9533889f305beb11cd1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0a329e55433ad85b9d62cb8efe4f17bbf7084cbdf80abbc8f890b998c062ee08",
-				"dweb:/ipfs/QmbsqR2URuuz9F5ky6LHSYJKb7nQZvYbwgYoeMh5TAsfDz"
+				"bzz-raw://eb225009add2034e6e4f2dad84f531a81b5f3028199a4eecf7667650ccebf4d2",
+				"dweb:/ipfs/QmV7n65YHy8DGsYnwReR9pdXhxo44sGnbfNt1tj2ZvPKm4"
 			]
 		}
 	},
