@@ -7,53 +7,69 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "counter",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getCounter",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getPreviousCounter",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "increment",
-				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "deployer",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "previousCounter",
+				"name": "deploymentTimestamp",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDeploymentInfo",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "number",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -68,11 +84,11 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_value",
+						"name": "_number",
 						"type": "uint256"
 					}
 				],
-				"name": "setCounter",
+				"name": "setNumber",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -91,7 +107,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task12.sol": "StatePersistence"
+			"remix-phase-2/task13.sol": "DeploymentReset"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -105,12 +121,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task12.sol": {
-			"keccak256": "0x648c6a794c9a6491a398866e171215d4c225b80e157f62325fc0ccd4d054adfd",
+		"remix-phase-2/task13.sol": {
+			"keccak256": "0x97c1a4ac3b9818f9d76b5638515b27771ef6466a3accffccdab99a6044d8cf7e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://044ba32323d87abe10178002247a6c27a53a7204da38ad0a7f2712bf2393aed7",
-				"dweb:/ipfs/QmbkzP4bz6wVPcvnhkNncE3QGWGW9rWuE5ozemGquqKHYC"
+				"bzz-raw://68a709b09ab98314b04712254cdee5585c49cac4f24cee3eb6a2c5529c1c8745",
+				"dweb:/ipfs/Qmct88hWkWfBvhUkwG4opSb3mUi8yzHyNm4K8NZ375imxZ"
 			]
 		}
 	},

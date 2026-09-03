@@ -7,74 +7,67 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "counter",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getCounter",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getPreviousCounter",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "increment",
+				"name": "addToWitelist",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "previousCounter",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_value",
-						"type": "uint256"
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
 					}
 				],
-				"name": "setCounter",
+				"name": "checkWhitelist",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isWhitelisted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "removeFromWhitelist",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "whitelisted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -91,7 +84,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task12.sol": "StatePersistence"
+			"remix-phase-2/task10.sol": "DeleteMappingEntry"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -105,12 +98,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task12.sol": {
-			"keccak256": "0x648c6a794c9a6491a398866e171215d4c225b80e157f62325fc0ccd4d054adfd",
+		"remix-phase-2/task10.sol": {
+			"keccak256": "0x321a8b351f1127bcdaae7301e325bc7fdc7e04566ec8f2b869bff9432d12200d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://044ba32323d87abe10178002247a6c27a53a7204da38ad0a7f2712bf2393aed7",
-				"dweb:/ipfs/QmbkzP4bz6wVPcvnhkNncE3QGWGW9rWuE5ozemGquqKHYC"
+				"bzz-raw://e9045487282f2b80ae1edbb5036c282a17be468ca087c92542b9c49a524c5d29",
+				"dweb:/ipfs/QmWJasyjEGUjvjwfgePfJsuhTHGiARHX9NNtiMjLGjMnQa"
 			]
 		}
 	},

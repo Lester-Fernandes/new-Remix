@@ -7,53 +7,37 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "counter",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getCounter",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getPreviousCounter",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "increment",
-				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "updater",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "oldvalue",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newValue",
+						"type": "uint256"
+					}
+				],
+				"name": "ValueUpdate",
+				"type": "event"
 			},
 			{
 				"inputs": [],
-				"name": "previousCounter",
+				"name": "getvalue",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -68,13 +52,52 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_value",
+						"name": "_amount",
 						"type": "uint256"
 					}
 				],
-				"name": "setCounter",
+				"name": "increaseValue",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_newValue",
+						"type": "uint256"
+					}
+				],
+				"name": "updateValue",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "value",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -91,7 +114,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task12.sol": "StatePersistence"
+			"remix-phase-2/rask14.sol": "StateMutation"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -105,12 +128,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task12.sol": {
-			"keccak256": "0x648c6a794c9a6491a398866e171215d4c225b80e157f62325fc0ccd4d054adfd",
+		"remix-phase-2/rask14.sol": {
+			"keccak256": "0xdc29b578610be378cef69181ace27531574a26c0181c92833e217958ed64d518",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://044ba32323d87abe10178002247a6c27a53a7204da38ad0a7f2712bf2393aed7",
-				"dweb:/ipfs/QmbkzP4bz6wVPcvnhkNncE3QGWGW9rWuE5ozemGquqKHYC"
+				"bzz-raw://bbbd98600d61c0a22726559cbfe3cfdd3749d20b54afad6b59b39b8229b550c5",
+				"dweb:/ipfs/QmZYq23dJgonjcPpBNXdmJEw8hms7BRwAgpRZMooY2UiPK"
 			]
 		}
 	},

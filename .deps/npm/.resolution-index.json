@@ -799,46 +799,6 @@
       }
     }
   },
-  "remix-phase-2/task11.sol": {
-    "__sources__": {
-      "remix-phase-2/task11.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract deleteArray {\r\n    uint256[] public number;\r\n\r\n    function addnumber(uint256 value) external {\r\n        number.push(value);\r\n    }\r\n\r\n    function deleteItem(uint256 index) external {\r\n        require(index < number.length,\"Invalid index\");\r\n\r\n        delete number[index];\r\n    }\r\n\r\n    function getLength() external view returns (uint256) {\r\n        return number.length;\r\n    }\r\n}",
-        "file": "remix-phase-2/task11.sol"
-      }
-    }
-  },
-  "remix-phase-2/task10.sol": {
-    "__sources__": {
-      "remix-phase-2/task10.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract deleteMapping {\r\n    mapping(address => bool) public listed;\r\n\r\n    function add(address user) external {\r\n        require(user != address(0),\"Invalid address\");\r\n\r\n        listed[user] = true;\r\n    }\r\n\r\n    function remove(address user) external {\r\n        require(user != address(0),\"Invalid address\");\r\n\r\n        delete listed[user];\r\n    }\r\n\r\n}",
-        "file": "remix-phase-2/task10.sol"
-      }
-    }
-  },
-  "remix-phase-2/task9.sol": {
-    "__sources__": {
-      "remix-phase-2/task9.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract deleteTask {\r\n    uint256 public number;\r\n\r\n    function setNumber(uint256 newNumber) external {\r\n        number = newNumber;\r\n    }\r\n\r\n    function resetNumber() external {\r\n        delete number;\r\n    }\r\n}",
-        "file": "remix-phase-2/task9.sol"
-      }
-    }
-  },
-  "remix-phase-2/task2.sol": {
-    "__sources__": {
-      "remix-phase-2/task2.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract StateOverwriteVul {\r\n\r\n    uint256 public number;\r\n\r\n    function updateNumber(uint256 _newNumber) public {\r\n        number = _newNumber;\r\n    }\r\n\r\n    function getNumber() public view returns (uint256) {\r\n        return number;\r\n    }\r\n}\r\n*/\r\n\r\ncontract StateOverwrite {\r\n    uint256 public number; // Current Value\r\n\r\n    uint256 public previousNumber; // Stores the value before the most recent update\r\n\r\n    function updateNumber(uint256 _newNumber) public { \r\n        previousNumber = number;\r\n\r\n        number = _newNumber;\r\n    }\r\n\r\n    function getNumber() public view returns (uint256) {\r\n        return previousNumber;  \r\n    }\r\n}",
-        "file": "remix-phase-2/task2.sol"
-      }
-    }
-  },
-  "remix-phase-2/task1.sol": {
-    "__sources__": {
-      "remix-phase-2/task1.sol": {
-        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract StoreUintVul {\r\n\r\n    uint256 public number;\r\n\r\n    function storeNumber(uint256 _newNumber) public {\r\n        number = _newNumber;\r\n    }\r\n\r\n    function getNumber() public view returns (uint256) {\r\n        return number;\r\n    }\r\n}\r\n\r\n*/\r\n\r\ncontract StoreUint {\r\n    uint256 public number; // Store the number permanenty\r\n\r\n    address public owner; // Address that is allowed to modifer the number\r\n\r\n    constructor() { // Runs only once when the contract is deployed\r\n        owner = msg.sender;\r\n    }\r\n\r\n    function storeNumber(uint256 _newNumber) public { \r\n        require(msg.sender == owner,\"Only the owner can update\"); // Only the owner can update the number;\r\n\r\n        number = _newNumber;\r\n    }\r\n\r\n    function getNumber() public view returns (uint256) {\r\n        return number;\r\n    }\r\n}",
-        "file": "remix-phase-2/task1.sol"
-      }
-    }
-  },
   "remix-phase-2/task3.sol": {
     "__sources__": {
       "remix-phase-2/task3.sol": {
@@ -884,6 +844,78 @@
       "remix-phase-2/task8.sol": {
         "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract DynamicArrayGrowthVul {\r\n\r\n    uint256[] public numbers;\r\n\r\n    function addMultipleValues(uint256 _value1,uint256 _value2,uint256 _value3) public {\r\n        numbers.push(_value1);\r\n        numbers.push(_value2);\r\n        numbers.push(_value3);\r\n    }\r\n\r\n    function getNumber(uint256 _index)public\r\n        view\r\n        returns (uint256)\r\n    {\r\n        return numbers[_index];\r\n    }\r\n\r\n    function getLength() public view returns (uint256) {\r\n        return numbers.length;\r\n    }\r\n}\r\n*/\r\n\r\ncontract DynamicArrayGrowth {\r\n    uint256[] public number;\r\n\r\n    uint256 public constant MAX_LENGTH = 10;\r\n\r\n    function MultipleValues(uint256 _value1, uint256 _value2, uint256 _value3) public { // Adds three values to the array\r\n        require(number.length + 3 <= MAX_LENGTH,\"Array maximum length exceeded\");\r\n\r\n        number.push(_value1);\r\n\r\n        number.push(_value2);\r\n\r\n        number.push(_value3);\r\n    }\r\n\r\n    function getNumber(uint256 _index) public view returns (uint256) {\r\n        return number[_index];\r\n    }\r\n\r\n    function getLength() public view returns (uint256) {\r\n        return number.length;\r\n    }\r\n}",
         "file": "remix-phase-2/task8.sol"
+      }
+    }
+  },
+  "remix-phase-2/task9.sol": {
+    "__sources__": {
+      "remix-phase-2/task9.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract DeleteStorageVariableVul {\r\n\r\n    uint256 public number = 100;\r\n\r\n    bool public isActive = true;\r\n\r\n    address public owner =\r\n        0x1111111111111111111111111111111111111111;\r\n\r\n    string public message = \"Blockchain\";\r\n\r\n    uint256[] public numbers;\r\n\r\n    constructor() {\r\n        numbers.push(10);\r\n        numbers.push(20);\r\n        numbers.push(30);\r\n    }\r\n\r\n    \r\n    =====================================================\r\n    DELETE UINT\r\n    =====================================================\r\n    \r\n\r\n    function deleteNumber() public {\r\n\r\n        delete number;\r\n    }\r\n\r\n    \r\n    =====================================================\r\n    DELETE BOOL\r\n    =====================================================\r\n    \r\n\r\n    function deleteBool() public {\r\n\r\n        delete isActive;\r\n    }\r\n\r\n    \r\n    =====================================================\r\n    DELETE ADDRESS\r\n    =====================================================\r\n    \r\n\r\n    function deleteOwner() public {\r\n\r\n        delete owner;\r\n    }\r\n\r\n    \r\n    =====================================================\r\n    DELETE STRING\r\n    =====================================================\r\n    \r\n\r\n    function deleteMessage() public {\r\n\r\n        delete message;\r\n    }\r\n\r\n    \r\n    =====================================================\r\n    DELETE ENTIRE ARRAY\r\n    =====================================================\r\n    \r\n\r\n    function deleteArray() public {\r\n\r\n        delete numbers;\r\n    }\r\n\r\n    \r\n    =====================================================\r\n    DELETE ARRAY INDEX\r\n    =====================================================\r\n    \r\n\r\n    function deleteArrayIndex(uint256 _index) public {\r\n\r\n        delete numbers[_index];\r\n    }\r\n\r\n    \r\n    =====================================================\r\n    VIEW ARRAY\r\n    =====================================================\r\n    \r\n\r\n    function getArray()\r\n        public\r\n        view\r\n        returns(uint256[] memory)\r\n    {\r\n        return numbers;\r\n    }\r\n}\r\n*/\r\n\r\ncontract deleteStorageVariable {\r\n    uint256 public number = 100;\r\n\r\n    bool public isActive = true;\r\n\r\n    address public owner = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;\r\n\r\n    string public message = \"Lester\";\r\n\r\n    uint256[] public numbers;\r\n\r\n    constructor() {\r\n        numbers.push(10);\r\n        numbers.push(20);\r\n        numbers.push(30);\r\n    }\r\n\r\n    function deleteNumber() public {\r\n        delete number;\r\n    }\r\n\r\n    function deleteBool() public {\r\n        delete isActive;\r\n    }\r\n\r\n    function deleteOwner() public {\r\n        delete owner;\r\n    }\r\n\r\n    function deleteMessage() public {\r\n        delete message;\r\n    }\r\n\r\n    function deleteArray() public {\r\n        delete number;\r\n    }\r\n\r\n    function removeArrayElement(uint256 _index) public {\r\n        require(_index < numbers.length,\"Index out of bounds\"); // check if the index exists\r\n\r\n        numbers[_index] = numbers[numbers.length -1]; // move the last element to the removed position\r\n\r\n        numbers.pop(); // Remove the last element\r\n    }\r\n\r\n    function getArray() public view returns (uint256[] memory) {\r\n        return numbers;\r\n    }\r\n\r\n    function getLength() public view returns (uint256) {\r\n        return numbers.length;\r\n    }\r\n}",
+        "file": "remix-phase-2/task9.sol"
+      }
+    }
+  },
+  "remix-phase-2/task10.sol": {
+    "__sources__": {
+      "remix-phase-2/task10.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract DeleteMappingEntryVul {\r\n\r\n    mapping(address => uint256) public balances;\r\n\r\n    function setBalance(uint256 _amount) public {\r\n        balances[msg.sender] = _amount;\r\n    }\r\n\r\n    function deleteMyBalance() public {\r\n        delete balances[msg.sender];\r\n    }\r\n\r\n    function getMyBalance() public view returns (uint256) {\r\n        return balances[msg.sender];\r\n    }\r\n}\r\n*/\r\n\r\ncontract DeleteMappingEntry {\r\n    mapping(address => bool) public whitelisted;\r\n\r\n    function addToWitelist() public {\r\n        whitelisted[msg.sender] = true;\r\n    }\r\n\r\n    function removeFromWhitelist() public {\r\n        delete whitelisted[msg.sender];\r\n    }\r\n\r\n    function isWhitelisted() public view returns (bool) {\r\n        return whitelisted[msg.sender];\r\n    }\r\n\r\n    function checkWhitelist(address _user) public view returns (bool) {\r\n        return whitelisted[_user];\r\n    }\r\n}",
+        "file": "remix-phase-2/task10.sol"
+      }
+    }
+  },
+  "remix-phase-2/task11.sol": {
+    "__sources__": {
+      "remix-phase-2/task11.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract SparseArrayBehaviorVul {\r\n\r\n    uint256[] public numbers;\r\n\r\n    function addNumber(uint256 _number) public {\r\n        numbers.push(_number);\r\n    }\r\n\r\n    function deleteItem(uint256 _index) public {\r\n        delete numbers[_index];\r\n    }\r\n\r\n    function getArray()public view returns (uint256[] memory){\r\n        return numbers;\r\n    }\r\n\r\n    function getLength() public view returns (uint256) {\r\n        return numbers.length;\r\n    }\r\n}\r\n*/\r\n\r\ncontract SparseArrayBehavior {\r\n    uint256[] public number;\r\n\r\n    function addNumber(uint256 _number) public {\r\n        number.push(_number);\r\n    }\r\n\r\n    function deleteItem(uint256 _index) public {\r\n        require(_index < number.length,\"Index out of bounds\");\r\n\r\n        for(uint256 i = _index; i < number.length - 1; i++) {\r\n            number[i] = number[i + 1];\r\n        }\r\n\r\n        number.pop();\r\n    }\r\n\r\n    function getArray() public view returns (uint256[] memory) {\r\n        return number;\r\n    }\r\n\r\n    function getLength() public view returns (uint256) {\r\n        return number.length;\r\n    }\r\n}",
+        "file": "remix-phase-2/task11.sol"
+      }
+    }
+  },
+  "remix-phase-2/task12.sol": {
+    "__sources__": {
+      "remix-phase-2/task12.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract StatePersistenceVul {\r\n\r\n    uint256 public counter;\r\n\r\n    function increment() public {\r\n        counter = counter + 1;\r\n    }\r\n\r\n    function setCounter(uint256 _value) public {\r\n        counter = _value;\r\n    }\r\n\r\n    function getCounter() public view returns (uint256) {\r\n        return counter;\r\n    }\r\n}\r\n*/\r\n\r\ncontract StatePersistence {\r\n\r\n    uint256 public counter;\r\n\r\n    uint256 public previousCounter;\r\n\r\n    function increment() public {\r\n        previousCounter = counter; // Save the current value before changing it\r\n\r\n        counter = counter + 1; // Update the state\r\n    }\r\n\r\n    function setCounter(uint256 _value) public {\r\n        previousCounter = counter; // Save old value before updating\r\n\r\n        counter = _value; // Set new value\r\n    }\r\n\r\n    function getCounter() public view returns (uint256) {\r\n        return counter;\r\n    }\r\n\r\n    function getPreviousCounter() public view returns (uint256) {\r\n        return previousCounter;\r\n    }\r\n}",
+        "file": "remix-phase-2/task12.sol"
+      }
+    }
+  },
+  "remix-phase-2/task13.sol": {
+    "__sources__": {
+      "remix-phase-2/task13.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract DeploymentResetVul {\r\n\r\n    uint256 public number;\r\n\r\n    function setNumber(uint256 _number) public {\r\n\r\n        number = _number;\r\n    }\r\n\r\n    function getNumber() public view returns (uint256) {\r\n\r\n        return number;\r\n    }\r\n}\r\n*/\r\n\r\ncontract DeploymentReset {\r\n    uint256 public number;\r\n\r\n    address public deployer;\r\n\r\n    uint256 public deploymentTimestamp;\r\n\r\n    constructor() {\r\n        deployer = msg.sender; // Store the deployer's address\r\n\r\n        deploymentTimestamp = block.timestamp; // Store the depoyment timestamp\r\n    }\r\n\r\n    function setNumber(uint256 _number) public {\r\n        number = _number;\r\n    }\r\n\r\n    function getNumber() public view returns (uint256) {\r\n        return number;\r\n    }\r\n\r\n    function getDeploymentInfo() public view returns (address, uint256) {\r\n        return(deployer, deploymentTimestamp);\r\n    }\r\n}",
+        "file": "remix-phase-2/task13.sol"
+      }
+    }
+  },
+  "remix-phase-2/rask14.sol": {
+    "__sources__": {
+      "remix-phase-2/rask14.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract StateMutationVul {\r\n\r\n    uint256 public value;\r\n\r\n    function updateValue(uint256 _newValue) public {\r\n\r\n        value = _newValue;\r\n    }\r\n\r\n    function increaseValue(uint256 _amount) public {\r\n\r\n        value = value + _amount;\r\n    }\r\n\r\n    function getValue() public view returns (uint256) {\r\n\r\n        return value;\r\n    }\r\n}\r\n\r\n*/\r\n\r\ncontract StateMutation {\r\n\r\n    address public owner;\r\n\r\n    uint256 public value;\r\n\r\n    event ValueUpdate(address indexed updater, uint256 oldvalue, uint256 newValue);\r\n\r\n    constructor() {\r\n        owner = msg.sender;\r\n    }\r\n\r\n    modifier onlyowner() {\r\n        require(msg.sender == owner,\"Only owner can modify state\");\r\n        _;\r\n    }\r\n\r\n    function updateValue(uint256 _newValue) public onlyowner {\r\n        uint256 oldvalue = value; // Save the old value before changing storage\r\n\r\n        value = _newValue;\r\n\r\n        emit ValueUpdate(msg.sender, oldvalue, _newValue);\r\n    }\r\n\r\n    function increaseValue(uint256 _amount) public onlyowner {\r\n        uint256 oldvalue = value; // Save the old value\r\n\r\n        value = value + _amount; // Modify storage\r\n\r\n        emit ValueUpdate(msg.sender, oldvalue, value); \r\n    }\r\n\r\n    function getvalue() public view returns (uint256) {\r\n        return value;\r\n    }\r\n}",
+        "file": "remix-phase-2/rask14.sol"
+      }
+    }
+  },
+  "remix-phase-2/task2.sol": {
+    "__sources__": {
+      "remix-phase-2/task2.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract StateOverwriteVul {\r\n\r\n    uint256 public number;\r\n\r\n    function updateNumber(uint256 _newNumber) public {\r\n        number = _newNumber;\r\n    }\r\n\r\n    function getNumber() public view returns (uint256) {\r\n        return number;\r\n    }\r\n}\r\n*/\r\n\r\ncontract StateOverwrite {\r\n    uint256 public number; // Current Value\r\n\r\n    uint256 public previousNumber; // Stores the value before the most recent update\r\n\r\n    function updateNumber(uint256 _newNumber) public { \r\n        previousNumber = number;\r\n\r\n        number = _newNumber;\r\n    }\r\n\r\n    function getNumber() public view returns (uint256) {\r\n        return previousNumber;  \r\n    }\r\n}",
+        "file": "remix-phase-2/task2.sol"
+      }
+    }
+  },
+  "remix-phase-2/task1.sol": {
+    "__sources__": {
+      "remix-phase-2/task1.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract StoreUintVul {\r\n\r\n    uint256 public number;\r\n\r\n    function storeNumber(uint256 _newNumber) public {\r\n        number = _newNumber;\r\n    }\r\n\r\n    function getNumber() public view returns (uint256) {\r\n        return number;\r\n    }\r\n}\r\n\r\n*/\r\n\r\ncontract StoreUint {\r\n    uint256 public number; // Store the number permanenty\r\n\r\n    address public owner; // Address that is allowed to modifer the number\r\n\r\n    constructor() { // Runs only once when the contract is deployed\r\n        owner = msg.sender;\r\n    }\r\n\r\n    function storeNumber(uint256 _newNumber) public { \r\n        require(msg.sender == owner,\"Only the owner can update\"); // Only the owner can update the number;\r\n\r\n        number = _newNumber;\r\n    }\r\n\r\n    function getNumber() public view returns (uint256) {\r\n        return number;\r\n    }\r\n}",
+        "file": "remix-phase-2/task1.sol"
+      }
+    }
+  },
+  "remix-phase-2/task15.sol": {
+    "__sources__": {
+      "remix-phase-2/task15.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n/*\r\ncontract StorageReferenceVul {\r\n\r\n    struct User {\r\n\r\n        uint256 age;\r\n\r\n        bool active;\r\n    }\r\n\r\n    mapping(address => User) public users;\r\n\r\n    function createUser(uint256 _age) public {\r\n\r\n        users[msg.sender] = User(_age, true);\r\n    }\r\n\r\n    function updateAge(uint256 _newAge) public {\r\n\r\n        /*\r\n            STORAGE REFERENCE VARIABLE\r\n\r\n            This creates POINTER to actual storage.\r\n\r\n            user is NOT copy.\r\n\r\n            user directly references:\r\n            users[msg.sender]\r\n        \r\n        User storage user = users[msg.sender];\r\n\r\n        /*\r\n            DIRECT STORAGE MUTATION\r\n\r\n            Since user points to storage,\r\n            this updates blockchain state directly.\r\n        \r\n        user.age = _newAge;\r\n    }\r\n\r\n    function deactivateUser() public {\r\n\r\n        \r\n            Another storage reference example\r\n        \r\n        User storage user = users[msg.sender];\r\n\r\n        user.active = false;\r\n    }\r\n\r\n    function getMyData()\r\n        public\r\n        view\r\n        returns (uint256, bool)\r\n    {\r\n        User storage user = users[msg.sender];\r\n\r\n        return (user.age, user.active);\r\n    }\r\n}\r\n*/\r\n\r\ncontract StorageReference {\r\n    struct User {\r\n    uint256 age;\r\n    bool active;\r\n    }\r\n\r\n    mapping(address => User) public users;\r\n\r\n    function createUser(uint256 _age) public {\r\n        users[msg.sender] = User(_age, true);\r\n    }\r\n\r\n    function updateAge(uint256 _newAge) public {\r\n        User storage user = users[msg.sender];\r\n\r\n        user.age = _newAge;\r\n    }\r\n\r\n    function deactiveUser() public {\r\n        User storage user = users[msg.sender];\r\n\r\n        user.active = false;\r\n    }\r\n\r\n    function modifyMemoryCopy(uint256 _newAge) public view returns (uint256, bool) {\r\n        User memory User = users[msg.sender]; // create temporary memory copy\r\n\r\n        \r\n        User.age = _newAge;\r\n        User.active = false;\r\n\r\n        return(User.age,User.active); // Reaturn modified temporary values\r\n    }\r\n\r\n    function getMyData() public view returns (uint256, bool) {\r\n        User storage User = users[msg.sender];\r\n\r\n        return(User.age, User.active);\r\n    }\r\n}",
+        "file": "remix-phase-2/task15.sol"
       }
     }
   }
