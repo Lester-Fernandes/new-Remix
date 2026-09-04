@@ -153,11 +153,11 @@
 	},
 	"sources": {
 		"remix-phase-2/task6.sol": {
-			"keccak256": "0x66ad1a447661e2b66aedaac4cd7e960f15e38015e8e4a5df9eaf8ee07facc908",
+			"keccak256": "0xfe8ded9c390fe2209def0b1f0d535689ca777b6b3ac1b821a8051183630c2120",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://92897595cfbce5096a7728edaba56e499eb6750dd5259604e22fe275ac419b06",
-				"dweb:/ipfs/QmXBKyPzkpv3YviWCUvT5Gis4CxeJcvLTZ2gPanSnrmdnE"
+				"bzz-raw://967e4262981714140e28e9c814b0b2dd7a4e34fd0275e9ff5bc2efb04b2b4fa1",
+				"dweb:/ipfs/QmaPLhMAjUWA5SqqHTyrjeEr8z96KJbenvvrxjTsbd3kYF"
 			]
 		}
 	},

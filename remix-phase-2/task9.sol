@@ -103,6 +103,33 @@ contract DeleteStorageVariableVul {
 }
 */
 
+/*
+Audit Report
+
+Title: Unsafe Array Element Deletion and incorrect array deletion logic
+
+Severity: Medium
+
+Location: Contract: DeleteStorageVariableVul
+          Function: deleteArrayIndex and deleteArray
+
+Vulnerability Description: The vulnerable contract provides two array deletion operations
+
+Impact: incorrect deletion of an array element can leve unwanted zero values inside the array
+
+Proof of Concept:
+1. Deploy the vulnerable DeleteStorageVariableVul contract
+2. The constructor creates: [10, 20, 30]
+3. Call: deleteArrayIndex(1)
+4. The resulting array becomes[10.0.30]
+5. The array length remains: 3
+
+Root Cause: The root cause is that deleteArrayIndex() performs a direct deletion without validating the supplied index
+
+Recommendation: Validate the array index before accessing the array
+
+*/
+
 contract deleteStorageVariable {
     uint256 public number = 100;
 
