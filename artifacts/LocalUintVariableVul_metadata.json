@@ -6,8 +6,19 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "getNumber",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_a",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_b",
+						"type": "uint256"
+					}
+				],
+				"name": "calculateSum",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -15,12 +26,12 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "number",
+				"name": "demonstrateLocalVariable",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -28,33 +39,38 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "previousNumber",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_newNumber",
+						"name": "_x",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_y",
 						"type": "uint256"
 					}
 				],
-				"name": "updateNumber",
+				"name": "storeCalculatedValue",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "storedValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -71,7 +87,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task2.sol": "StateOverwrite"
+			"remix-phase-2/task16.sol": "LocalUintVariableVul"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -85,12 +101,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task2.sol": {
-			"keccak256": "0x86237aa51b0edd312a5cfa8d414e8b3558e799edc69cdef708c003b1726d062b",
+		"remix-phase-2/task16.sol": {
+			"keccak256": "0x3b4335fe35f47fae9df621a116b6ee47c5a9097c18435c7242ef223c0719b049",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://624b84d21c3279864f411eb6ba8e955eb766253d5bf60a8ea91a1d395995ac57",
-				"dweb:/ipfs/QmXSEHc1CvgEX1uoKdt6u96q17v5NmsLr1TYV4NEMbQemL"
+				"bzz-raw://8a20b09b0060b7eb9b8a1a65901f00e8ae30a7727d43f498f48da70d374503a2",
+				"dweb:/ipfs/QmSvVnTJ7q41sQz5tU26uuFM5jJ4R5Fhv3pXMT9QdqzS8B"
 			]
 		}
 	},

@@ -16,6 +16,37 @@ contract UserStorageVul {
 }
 */
 
+/*
+Audit Report
+
+Title: Unrestricted Overwrite of User Balance
+
+Severity: Medium
+
+Location: Contract: UserStorageVal
+        Function: storeValue()
+
+Vulnerability Description: The storeValue() function directly assigns the supplied _amount to balances[msg.sender]
+
+Impact: A user can arbitrarily decrease or overwrite their stored balance
+
+Proof of Concept:
+    1. Deploy the vulnerable userStorageVul contract
+    2. User calls: storeValue(100)
+    3. balances[msg.sender] become 100
+    4. User calls: storeValue(20)
+    5. balances[msg.sender] becomes 20
+    6. The previous value 100 is overwritten
+
+Root Cause: The root cause is that storeValue() directly assigns _amount to the user's mapping entry without validating
+            the new value aganst the existing balance
+
+
+Recommendation: Validate that the new balance is greater than the user's existing balance before updating the mapping
+
+
+*/
+
 contract userBalance {
     mapping(address => uint256) public balance;
 

@@ -45,6 +45,35 @@ contract StructStorageVul {
     }
 }
 */
+/*
+Audit Report
+
+Title: Shared Struct Storage and Unrestricted User Data Overwrite
+
+Severity: Medium
+
+Location: Contract: StructStorageVul
+          Function: storeUser()
+
+Vulnerability Description: The vulnerable contract store user inormation is a single global struct
+
+Impact: An attacker can overwrite the profile information stored by another user
+
+Proof of Concept: 
+    1. Deploy the vulnerable StructStorageVul contract
+    2. User a calls: storeUser("Lester", "21", addressA, true)
+    3. The global user struct contains Lester information
+    4. User B calls: storeUser("Bob", 100, addressB, false)
+    5. The contract overwrites the existing struct
+    6. The stored profile now contains Bob's information
+    7. Lester's previously stored profile is no longer available
+
+    Root Cause: The root cause is the user of a single global user storage variable
+
+    Recommendation: Store each user's profile using a mapping keyed by the user's address
+
+*/
+
 
 contract StructStorage { // Stores profile information
     struct User {

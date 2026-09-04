@@ -16,6 +16,35 @@ contract StateOverwriteVul {
 }
 */
 
+/*
+
+Audit Report
+
+Title: State Overwrite without previous value preservation
+
+Severity: Low
+
+Location: Contract: StateOverwriteVul
+	    Function: updateNumber()
+
+Vulnerability Description: The updateNumber() function directly assigns _newNumber to the number state variable without storing the existing value first
+
+Impact: The contract loses the previous state value after every update
+
+Proof of Concept: 
+1.	Deploy the vulnerable contract
+2.	Call: updateNumber(100)
+3.	Number becomes 100
+4.	Call: updateNumber(200)
+5.	Number becomes 200
+6.	The previous value 100 is no longer stored by the contract
+
+Root Cause: The root cause is that updateNumber() overwrites the number state variable directly
+
+Recommendation: Store the current value in a separate state variable before updating number
+
+*/
+
 contract StateOverwrite {
     uint256 public number; // Current Value
 
