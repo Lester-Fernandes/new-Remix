@@ -67,3 +67,17 @@ contract LocalUintVariableVul {
 
 */
 
+contract LocalUintVariable {
+    uint256 public storedValue;
+
+    function calculateMultiplication(uint256 _a, uint _b) public pure returns (uint256)
+    {
+        uint256 result = _a * _b; // Local Variable
+
+        return result;
+    }
+
+    function getStoredValue() public view returns (uint256) {
+        return storedValue;
+    }
+}
