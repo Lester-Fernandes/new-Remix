@@ -6,57 +6,64 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "newAddress",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "_count",
+						"type": "uint256"
 					}
 				],
-				"name": "changaddress",
+				"name": "addValues",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "getAddress",
+				"name": "copyStorageToMemory",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "uint256[]",
 						"name": "",
-						"type": "address"
+						"type": "uint256[]"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
+				"inputs": [
 					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "_size",
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
+				"name": "returnLargeArray",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "storeAddress",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "storedValues",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "uint256",
 						"name": "",
-						"type": "address"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -76,7 +83,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task3.sol": "storeaddress"
+			"remix-phase-2/task25.sol": "LargeMemoryArrayVul"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -90,12 +97,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task3.sol": {
-			"keccak256": "0x0a80394da90815b9d5fb2cd126035ef61725cc80b77768bf3224a4234d6ff540",
+		"remix-phase-2/task25.sol": {
+			"keccak256": "0x3b3f880bc47c7d32daf1afb4b8108d265d0100917e2e52543fc12bff8d118234",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2511956a0f3339eeb4263b2a4b52621677e26f458aec70fb4445bd50a2f693ee",
-				"dweb:/ipfs/QmeWspRCcHWKjCNSHJDFSGyD3yZ1ai7SU1KJqUxGr2wGkh"
+				"bzz-raw://2f82507f6f0dfc394ff5e9fe60fa731115a4781d8321b2cf04b672b330aaf0b6",
+				"dweb:/ipfs/QmXRS1b7c81wjjozeEK6uMsPe9CEXbPfQz2QUqr7xbbBxV"
 			]
 		}
 	},
