@@ -80,7 +80,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task38.sol": "testToken"
+			"remix-phase-2/task49.sol": "TestToken"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -94,12 +94,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task38.sol": {
-			"keccak256": "0xa3ca183ce4178ea34925f56955c07d102d880abb403e550163b5639e3aac41a5",
+		"remix-phase-2/task49.sol": {
+			"keccak256": "0xd8080e659730369211ae692906853caf386957196c59d27b38696a3ac4d2adce",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://29cfc3a23d5b875d3bf8ee6a37e1bdda051ea2ca10380b458df5b3e7de86bf7d",
-				"dweb:/ipfs/QmUkQ1gs5YcrcArPDHE2WQjMquNBJdSidNYgRQQ1JkgSPC"
+				"bzz-raw://ed99c2ec9d78676cad509f184ee577a0da046b662b982b8e3272b6e702073082",
+				"dweb:/ipfs/QmSqytWAJyiA1PrrSYuCmbQYozsqhMq9Rb2bDUiu6cbWbX"
 			]
 		}
 	},
