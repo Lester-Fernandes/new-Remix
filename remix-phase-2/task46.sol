@@ -164,7 +164,7 @@ contract ManualRevertExample {
             revert("Odd number rejected");
         }
 
-        return "Evvent number accepted";
+        return "Event number accepted";
     }
 
     function silentRevert(bool _shouldFail) external pure {

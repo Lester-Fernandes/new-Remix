@@ -6,21 +6,6 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "AmountExceedsLimit",
-				"type": "error"
-			},
-			{
-				"inputs": [],
-				"name": "InsufficientBalance",
-				"type": "error"
-			},
-			{
-				"inputs": [],
-				"name": "InvalidAmount",
-				"type": "error"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -40,6 +25,13 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -47,9 +39,35 @@
 						"type": "uint256"
 					}
 				],
-				"name": "dangerousDeposit",
+				"name": "depositCorrect",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "depositWrong",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getContractBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -68,51 +86,12 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_number",
-						"type": "uint256"
-					}
-				],
-				"name": "onlyEvent",
-				"outputs": [
-					{
-						"internalType": "string",
+						"internalType": "address",
 						"name": "",
-						"type": "string"
+						"type": "address"
 					}
 				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_amount",
-						"type": "uint256"
-					}
-				],
-				"name": "safeDeposit",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "bool",
-						"name": "_shouldFail",
-						"type": "bool"
-					}
-				],
-				"name": "silentRevert",
-				"outputs": [],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "totalCounter",
+				"name": "rewards",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -121,6 +100,37 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -144,7 +154,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "withdrawWithRequire",
+				"name": "withdrawWrong",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -163,7 +173,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task46.sol": "ManualRevertExample"
+			"remix-phase-2/task47.sol": "OrderDependencyExample"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -177,12 +187,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task46.sol": {
-			"keccak256": "0x395caa4cdf496eedbbcee6b9a87e23077816fe3147d570fdf85d69f945f36ea9",
+		"remix-phase-2/task47.sol": {
+			"keccak256": "0x06025d6eaee6cdb5d43f67d79b4123f31e54140b39f16efe9fea1589e0e53be6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://07bf8d5470055853054728c6002d45d30e167fac8445768e00d4d275777a852d",
-				"dweb:/ipfs/QmQNBzqhb8YHYkrKPSjeTn7UPZPgpeuwycgQRW925dZdm4"
+				"bzz-raw://b6c95e2ab2e481261c41151d4de4de317ac61fd8690d0b99fead42b481c5e719",
+				"dweb:/ipfs/QmQtEdrrdY19qN65vW7BWdbjmwdCrz1PuFdgUEsd5gVEHf"
 			]
 		}
 	},

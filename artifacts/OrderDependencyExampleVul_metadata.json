@@ -6,21 +6,6 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "AmountExceedsLimit",
-				"type": "error"
-			},
-			{
-				"inputs": [],
-				"name": "InsufficientBalance",
-				"type": "error"
-			},
-			{
-				"inputs": [],
-				"name": "InvalidAmount",
-				"type": "error"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -47,14 +32,46 @@
 						"type": "uint256"
 					}
 				],
-				"name": "dangerousDeposit",
+				"name": "depositCorrect",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "depositWrong",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "rewards",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
-				"name": "getMyBalance",
+				"name": "totalSupply",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -68,83 +85,17 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "_number",
-						"type": "uint256"
-					}
-				],
-				"name": "onlyEvent",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
 					{
 						"internalType": "uint256",
 						"name": "_amount",
 						"type": "uint256"
 					}
 				],
-				"name": "safeDeposit",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "bool",
-						"name": "_shouldFail",
-						"type": "bool"
-					}
-				],
-				"name": "silentRevert",
-				"outputs": [],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "totalCounter",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_amount",
-						"type": "uint256"
-					}
-				],
-				"name": "withdraw",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_amount",
-						"type": "uint256"
-					}
-				],
-				"name": "withdrawWithRequire",
+				"name": "transfer",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -163,7 +114,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task46.sol": "ManualRevertExample"
+			"remix-phase-2/task48.sol": "OrderDependencyExampleVul"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -177,12 +128,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task46.sol": {
-			"keccak256": "0x395caa4cdf496eedbbcee6b9a87e23077816fe3147d570fdf85d69f945f36ea9",
+		"remix-phase-2/task48.sol": {
+			"keccak256": "0x1085901684de390c92eb20a612469de357b9501e628a2557c9c495248be5c076",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://07bf8d5470055853054728c6002d45d30e167fac8445768e00d4d275777a852d",
-				"dweb:/ipfs/QmQNBzqhb8YHYkrKPSjeTn7UPZPgpeuwycgQRW925dZdm4"
+				"bzz-raw://b8f4549aa532fe7531ee08d8db1971f85d7981eedcc286842374c506f8add2e3",
+				"dweb:/ipfs/QmcZfrP9Hbe2HycbevtNgu4szytq9aSQyHq1uz3Xoy6SHv"
 			]
 		}
 	},
