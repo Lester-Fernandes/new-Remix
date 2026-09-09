@@ -1,0 +1,95 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "code",
+						"type": "uint256"
+					}
+				],
+				"name": "CustomFailure",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "alowaysFail",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "callCounter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "failWithCustomError",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "normalFunction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-2/task59.sol": "Rejector"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-2/task59.sol": {
+			"keccak256": "0xd1f1b30b6bb1affcc0ba6e4a7b9c6338920bb1ac5894e4dd456ee10f36d140d0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://43abe4b1d65e195ebba3a26bb3556982c1b14ef464084bbe19df5b8da8969036",
+				"dweb:/ipfs/QmTBRFZW9FYgPctqcTAYidzbRkU4mfeNLiiLbRnXAHwenP"
+			]
+		}
+	},
+	"version": 1
+}
