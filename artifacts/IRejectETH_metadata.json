@@ -1,0 +1,60 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "failFunction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "successFunction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-2/task60.sol": "IRejectETH"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-2/task60.sol": {
+			"keccak256": "0x94a0545f8ae37a5a861713359bd0663da0b301a52cfe1ebafd871d14fd55db37",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://82c6b6ad043b86320c37eff0d7c4da4b7e7e33133c737e988d28be1c0a3b6986",
+				"dweb:/ipfs/QmZsf6cDCj1DPCjjSesErBNj3dQLDNFWmL7p1xmAcLkruN"
+			]
+		}
+	},
+	"version": 1
+}
