@@ -1,0 +1,85 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "number",
+						"type": "uint256"
+					}
+				],
+				"name": "TargetCalled",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "callCounter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "number",
+						"type": "uint256"
+					}
+				],
+				"name": "recordCall",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-2/task66.sol": "Looptarget"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-2/task66.sol": {
+			"keccak256": "0xb2041edf48350bf982a62c93586cbaba0bb736b5f2f3f553f92b495af714dae2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bbe5d650609d5ff3465b745bdbc4088ba024eace82d2365c9f8f8416a969f751",
+				"dweb:/ipfs/QmbrsTkPeUULREVE3iXBftDzZMw6V2LyyQ8M9j8PoWcEtj"
+			]
+		}
+	},
+	"version": 1
+}
