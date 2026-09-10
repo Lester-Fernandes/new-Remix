@@ -6,36 +6,12 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address payable",
-						"name": "_contractC",
-						"type": "address"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "string",
-						"name": "reason",
-						"type": "string"
-					}
-				],
-				"name": "CallFailed",
-				"type": "event"
-			},
-			{
 				"anonymous": false,
 				"inputs": [
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "receiver",
+						"name": "sender",
 						"type": "address"
 					},
 					{
@@ -45,7 +21,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "ETHSent",
+				"name": "ETHReceived",
 				"type": "event"
 			},
 			{
@@ -56,23 +32,35 @@
 						"internalType": "address",
 						"name": "caller",
 						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "number",
+						"type": "uint256"
 					}
 				],
-				"name": "MiddleStepExecuted",
+				"name": "NumberStored",
 				"type": "event"
 			},
 			{
 				"inputs": [],
-				"name": "callFailingStep",
+				"name": "callback",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "callFinalStep",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "callbackCounter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -90,10 +78,17 @@
 			},
 			{
 				"inputs": [],
-				"name": "contractC",
+				"name": "failFunction",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lastCaller",
 				"outputs": [
 					{
-						"internalType": "contract ContractnewC",
+						"internalType": "address",
 						"name": "",
 						"type": "address"
 					}
@@ -104,32 +99,19 @@
 			{
 				"inputs": [
 					{
-						"internalType": "bytes",
-						"name": "_data",
-						"type": "bytes"
+						"internalType": "uint256",
+						"name": "_number",
+						"type": "uint256"
 					}
 				],
-				"name": "decodeRevertMessage",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "lowLevelFinalStep",
+				"name": "setNumber",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "middleCounter",
+				"name": "storedNumber",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -138,27 +120,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "sendETHToC",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "tryCatchFailingStep",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "tryCatchFinalStep",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -179,7 +140,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task62.sol": "ContractB"
+			"remix-phase-2/task63.sol": "DataStorage"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -193,12 +154,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task62.sol": {
-			"keccak256": "0xbdb2c0d07bd937d151cf5bf003340e2526f9ce6e7251e62a23f3ca4fe9b8b45e",
+		"remix-phase-2/task63.sol": {
+			"keccak256": "0xff4866a45bd1d5ced05f743988af81331964b2203e5bf8376da405c386730252",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://76b0db9e588d324a1cd5624a2da3104103bd4049704ebc51ef1f4b78996b132e",
-				"dweb:/ipfs/QmSaTbjsEER68c3tPk1XZB1cTcHBXuxVuHRURynXeVLaXE"
+				"bzz-raw://c3d8613bc9b29fcdf05eba707764890ea6bfe053c0d6bf459e5a35ebcbbb8704",
+				"dweb:/ipfs/Qmc5BrNMz8TGHhauijNTH6pvAK5Nqrq18JY2fsYk6QBPos"
 			]
 		}
 	},

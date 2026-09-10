@@ -6,34 +6,39 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "contractBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address payable",
-						"name": "_receiver",
+						"name": "_target",
 						"type": "address"
 					}
 				],
-				"name": "dangerousSend",
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "caller",
+						"type": "address"
+					}
+				],
+				"name": "CallbackExecuted",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "attack",
 				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "lastSuccess",
+				"name": "attackStarted",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -45,30 +50,21 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address payable",
-						"name": "_receiver",
-						"type": "address"
-					}
-				],
-				"name": "sendETH",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "totalSent",
+				"name": "target",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "contract ExecutionTracer",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -84,7 +80,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task64.sol": "ETHSenderVul"
+			"remix-phase-2/task65.sol": "MaliciousCallback"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -98,12 +94,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task64.sol": {
-			"keccak256": "0x75e6dd541b5968fb23bb57cdbd57d05f5b84f84ae77042b135d22e1bba592ccb",
+		"remix-phase-2/task65.sol": {
+			"keccak256": "0xfff51399712f4460bc419563162218d4f66879e70c4115b858d2908d6e4e276c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b1d2144ed0860d2fe5ebe56a151412cb18496d5e6d83163c6958caf0ec9fa932",
-				"dweb:/ipfs/Qme3123e6cVsfggMiAWKR1CiYoc6XaoDThzF6Jx9zVJRBc"
+				"bzz-raw://0addee111eab43eee0a7ff34c2791989cec8417ac2ebb72294a47e002561c4ce",
+				"dweb:/ipfs/QmYoRmGWxS8GZjRaHd4tCkAKFaU7n5FS8WELDNbv684n9Y"
 			]
 		}
 	},

@@ -9,7 +9,7 @@
 				"inputs": [
 					{
 						"internalType": "address payable",
-						"name": "_contractC",
+						"name": "_target",
 						"type": "address"
 					}
 				],
@@ -21,58 +21,49 @@
 				"inputs": [
 					{
 						"indexed": false,
-						"internalType": "string",
-						"name": "reason",
-						"type": "string"
-					}
-				],
-				"name": "CallFailed",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "receiver",
-						"type": "address"
-					},
-					{
-						"indexed": false,
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "count",
 						"type": "uint256"
 					}
 				],
-				"name": "ETHSent",
+				"name": "Reentered",
 				"type": "event"
 			},
 			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "caller",
-						"type": "address"
-					}
-				],
-				"name": "MiddleStepExecuted",
-				"type": "event"
+				"stateMutability": "nonpayable",
+				"type": "fallback"
 			},
 			{
 				"inputs": [],
-				"name": "callFailingStep",
+				"name": "attack",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "callFinalStep",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "attackCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "attacking",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -90,46 +81,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "contractC",
-				"outputs": [
-					{
-						"internalType": "contract ContractnewC",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "bytes",
-						"name": "_data",
-						"type": "bytes"
-					}
-				],
-				"name": "decodeRevertMessage",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "lowLevelFinalStep",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "middleCounter",
+				"name": "maxAttacks",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -142,23 +94,15 @@
 			},
 			{
 				"inputs": [],
-				"name": "sendETHToC",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "tryCatchFailingStep",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "tryCatchFinalStep",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract ContractB",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -179,7 +123,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task62.sol": "ContractB"
+			"remix-phase-2/task62.sol": "MaliciousReentrant"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},

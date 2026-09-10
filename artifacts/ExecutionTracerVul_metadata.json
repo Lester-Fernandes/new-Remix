@@ -8,8 +8,8 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address payable",
-						"name": "_victim",
+						"internalType": "address",
+						"name": "_target",
 						"type": "address"
 					}
 				],
@@ -17,46 +17,13 @@
 				"type": "constructor"
 			},
 			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "AttackStarted",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "CallbackReceived",
-				"type": "event"
-			},
-			{
 				"inputs": [],
-				"name": "attack",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "attackAmount",
+				"name": "executionStage",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "string",
 						"name": "",
-						"type": "uint256"
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -64,23 +31,10 @@
 			},
 			{
 				"inputs": [],
-				"name": "attacking",
+				"name": "lastObservedSender",
 				"outputs": [
 					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "victim",
-				"outputs": [
-					{
-						"internalType": "contract ReentrancyVictim",
+						"internalType": "address",
 						"name": "",
 						"type": "address"
 					}
@@ -89,8 +43,37 @@
 				"type": "function"
 			},
 			{
-				"stateMutability": "payable",
-				"type": "receive"
+				"inputs": [],
+				"name": "localCounter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "contract ExternalTargetVul",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "traceExecution",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -106,7 +89,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task65.sol": "ReentrancyAttacker"
+			"remix-phase-2/task65.sol": "ExecutionTracerVul"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -121,11 +104,11 @@
 	},
 	"sources": {
 		"remix-phase-2/task65.sol": {
-			"keccak256": "0xfff51399712f4460bc419563162218d4f66879e70c4115b858d2908d6e4e276c",
+			"keccak256": "0xbc052426c5585077aa277206eff42003fc6c9895d7ad01ea20146899c7c18007",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0addee111eab43eee0a7ff34c2791989cec8417ac2ebb72294a47e002561c4ce",
-				"dweb:/ipfs/QmYoRmGWxS8GZjRaHd4tCkAKFaU7n5FS8WELDNbv684n9Y"
+				"bzz-raw://67b94fa3d9f82b6dc1e212a42900bed691fa426dba2e518d2079a5811a340463",
+				"dweb:/ipfs/QmW3r8H9Pt1nXjPTf2sV7YrDvoewBbspZXfxM1bUcUZMg5"
 			]
 		}
 	},

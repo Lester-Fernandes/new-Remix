@@ -6,6 +6,35 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "FallbackTriggered",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
 				"inputs": [],
 				"name": "contractBalance",
 				"outputs": [
@@ -19,47 +48,21 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address payable",
-						"name": "_receiver",
-						"type": "address"
-					}
-				],
-				"name": "dangerousSend",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "lastSuccess",
+				"name": "fallbackCalls",
 				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "uint256",
 						"name": "",
-						"type": "bool"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address payable",
-						"name": "_receiver",
-						"type": "address"
-					}
-				],
-				"name": "sendETH",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "totalSent",
+				"name": "receivedAmount",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -84,7 +87,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task64.sol": "ETHSenderVul"
+			"remix-phase-2/task64.sol": "payableFallbackReceiver"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -99,11 +102,11 @@
 	},
 	"sources": {
 		"remix-phase-2/task64.sol": {
-			"keccak256": "0x75e6dd541b5968fb23bb57cdbd57d05f5b84f84ae77042b135d22e1bba592ccb",
+			"keccak256": "0xffc03a2d0b1e649b6ed5f18466bd7b74d8490cfb8cc0b0a9055dc4d721847052",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b1d2144ed0860d2fe5ebe56a151412cb18496d5e6d83163c6958caf0ec9fa932",
-				"dweb:/ipfs/Qme3123e6cVsfggMiAWKR1CiYoc6XaoDThzF6Jx9zVJRBc"
+				"bzz-raw://e495befb7880e3cdd1011fda80eaef8e18c9b6c4980bd644569ee0c03079b9b6",
+				"dweb:/ipfs/QmdAFv8TuxRgeckLQJDnCk2TLbV2QwcRTUefdBujozvJ3v"
 			]
 		}
 	},

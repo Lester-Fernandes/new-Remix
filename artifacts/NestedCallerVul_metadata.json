@@ -8,8 +8,8 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address payable",
-						"name": "_victim",
+						"internalType": "address",
+						"name": "_target",
 						"type": "address"
 					}
 				],
@@ -17,41 +17,21 @@
 				"type": "constructor"
 			},
 			{
-				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": false,
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "_number",
 						"type": "uint256"
 					}
 				],
-				"name": "AttackStarted",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "CallbackReceived",
-				"type": "event"
-			},
-			{
-				"inputs": [],
-				"name": "attack",
+				"name": "callSetNumber",
 				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "attackAmount",
+				"name": "lastReadValue",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -64,12 +44,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "attacking",
+				"name": "localCounter",
 				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "uint256",
 						"name": "",
-						"type": "bool"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -77,20 +57,23 @@
 			},
 			{
 				"inputs": [],
-				"name": "victim",
+				"name": "readTargetNumber",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
 				"outputs": [
 					{
-						"internalType": "contract ReentrancyVictim",
+						"internalType": "contract DataStorageVul",
 						"name": "",
 						"type": "address"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -106,7 +89,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task65.sol": "ReentrancyAttacker"
+			"remix-phase-2/task63.sol": "NestedCallerVul"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -120,12 +103,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task65.sol": {
-			"keccak256": "0xfff51399712f4460bc419563162218d4f66879e70c4115b858d2908d6e4e276c",
+		"remix-phase-2/task63.sol": {
+			"keccak256": "0x2bb639504006f76fd0a76b9780ff0fbd99968153cc8e2c0ef0adbe92e5aa2aef",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0addee111eab43eee0a7ff34c2791989cec8417ac2ebb72294a47e002561c4ce",
-				"dweb:/ipfs/QmYoRmGWxS8GZjRaHd4tCkAKFaU7n5FS8WELDNbv684n9Y"
+				"bzz-raw://20c5e2f8ead874b9a2975f2e38448cf5d52a31d5e89cd7dc0ed74c0e1b58f66b",
+				"dweb:/ipfs/Qmba5TFTAy1ARPk4qSEym7EcGzAfuJciwp96j9rQaDisrQ"
 			]
 		}
 	},

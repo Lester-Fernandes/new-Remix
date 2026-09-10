@@ -9,7 +9,7 @@
 				"inputs": [
 					{
 						"internalType": "address payable",
-						"name": "_contractC",
+						"name": "_contractB",
 						"type": "address"
 					}
 				],
@@ -18,34 +18,8 @@
 			},
 			{
 				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "string",
-						"name": "reason",
-						"type": "string"
-					}
-				],
-				"name": "CallFailed",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "receiver",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "ETHSent",
+				"inputs": [],
+				"name": "ChainCompleted",
 				"type": "event"
 			},
 			{
@@ -58,21 +32,20 @@
 						"type": "address"
 					}
 				],
-				"name": "MiddleStepExecuted",
+				"name": "EntryStarted",
 				"type": "event"
 			},
 			{
 				"inputs": [],
-				"name": "callFailingStep",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "callFinalStep",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "contractB",
+				"outputs": [
+					{
+						"internalType": "contract ContractB",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -90,46 +63,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "contractC",
-				"outputs": [
-					{
-						"internalType": "contract ContractnewC",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "bytes",
-						"name": "_data",
-						"type": "bytes"
-					}
-				],
-				"name": "decodeRevertMessage",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "lowLevelFinalStep",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "middleCounter",
+				"name": "entryCounter",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -149,14 +83,28 @@
 			},
 			{
 				"inputs": [],
-				"name": "tryCatchFailingStep",
+				"name": "startChain",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "tryCatchFinalStep",
+				"name": "startFailingChain",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "startLowLevelChain",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "startTryCatchChain",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -179,7 +127,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task62.sol": "ContractB"
+			"remix-phase-2/task62.sol": "contractA"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},

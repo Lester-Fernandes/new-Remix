@@ -6,19 +6,14 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address payable",
-						"name": "_victim",
-						"type": "address"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"anonymous": false,
 				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
@@ -26,66 +21,60 @@
 						"type": "uint256"
 					}
 				],
-				"name": "AttackStarted",
+				"name": "ETHReceived",
 				"type": "event"
 			},
 			{
 				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
+						"indexed": true,
+						"internalType": "address",
+						"name": "caller",
+						"type": "address"
 					}
 				],
-				"name": "CallbackReceived",
+				"name": "FinalStepExecuted",
 				"type": "event"
 			},
 			{
 				"inputs": [],
-				"name": "attack",
+				"name": "contractBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "counter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "failStep",
 				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "attackAmount",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "attacking",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "victim",
-				"outputs": [
-					{
-						"internalType": "contract ReentrancyVictim",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
+				"name": "finalStep",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -106,7 +95,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task65.sol": "ReentrancyAttacker"
+			"remix-phase-2/task62.sol": "ContractC"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -120,12 +109,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task65.sol": {
-			"keccak256": "0xfff51399712f4460bc419563162218d4f66879e70c4115b858d2908d6e4e276c",
+		"remix-phase-2/task62.sol": {
+			"keccak256": "0x8f2ae59be5e91ce48666afbee14115eedbf21b2e12f76aefa62dd03acd423321",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0addee111eab43eee0a7ff34c2791989cec8417ac2ebb72294a47e002561c4ce",
-				"dweb:/ipfs/QmYoRmGWxS8GZjRaHd4tCkAKFaU7n5FS8WELDNbv684n9Y"
+				"bzz-raw://df87f343dd7313a72e1de1fb331b2cad2f199e0d1dcdcfa438b1e0d974860a8d",
+				"dweb:/ipfs/QmZXvupFwBpBzxFr2brQQ7DfMmD5vxfkxTJm12bJHKD3h4"
 			]
 		}
 	},

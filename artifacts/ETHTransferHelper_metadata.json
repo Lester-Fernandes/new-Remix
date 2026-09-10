@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "receiveETH",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"remix-phase-2/task64.sol": "ETHTransferHelper"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"remix-phase-2/task64.sol": {
+			"keccak256": "0xffc03a2d0b1e649b6ed5f18466bd7b74d8490cfb8cc0b0a9055dc4d721847052",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e495befb7880e3cdd1011fda80eaef8e18c9b6c4980bd644569ee0c03079b9b6",
+				"dweb:/ipfs/QmdAFv8TuxRgeckLQJDnCk2TLbV2QwcRTUefdBujozvJ3v"
+			]
+		}
+	},
+	"version": 1
+}

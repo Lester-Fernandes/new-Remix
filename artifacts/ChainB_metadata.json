@@ -8,8 +8,8 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address payable",
-						"name": "_victim",
+						"internalType": "address",
+						"name": "_c",
 						"type": "address"
 					}
 				],
@@ -21,66 +21,26 @@
 				"inputs": [
 					{
 						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "AttackStarted",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
+						"internalType": "string",
+						"name": "contractName",
+						"type": "string"
+					},
 					{
 						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
+						"internalType": "address",
+						"name": "caller",
+						"type": "address"
 					}
 				],
-				"name": "CallbackReceived",
+				"name": "ChainStep",
 				"type": "event"
 			},
 			{
 				"inputs": [],
-				"name": "attack",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "attackAmount",
+				"name": "contractC",
 				"outputs": [
 					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "attacking",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "victim",
-				"outputs": [
-					{
-						"internalType": "contract ReentrancyVictim",
+						"internalType": "contract ChainC",
 						"name": "",
 						"type": "address"
 					}
@@ -89,8 +49,37 @@
 				"type": "function"
 			},
 			{
-				"stateMutability": "payable",
-				"type": "receive"
+				"inputs": [],
+				"name": "counter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lastCaller",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "stepB",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -106,7 +95,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task65.sol": "ReentrancyAttacker"
+			"remix-phase-2/task65.sol": "ChainB"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},

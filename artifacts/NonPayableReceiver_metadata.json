@@ -7,15 +7,22 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "getSender",
+				"name": "counter",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "uint256",
 						"name": "",
-						"type": "address"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "increment",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -32,7 +39,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-1/task27.sol": "ContractA"
+			"remix-phase-2/task64.sol": "NonPayableReceiver"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -46,12 +53,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-1/task27.sol": {
-			"keccak256": "0x94998488d7b8edd76fc4a2f503dc9ddbbdcddaec660ffda573f04b5f4e3433d1",
+		"remix-phase-2/task64.sol": {
+			"keccak256": "0xffc03a2d0b1e649b6ed5f18466bd7b74d8490cfb8cc0b0a9055dc4d721847052",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a597fc5b68ef17fcad86764027df44512ff14e4207101ab001c763ffb0c8204a",
-				"dweb:/ipfs/QmVGMjWcs2TqJo94ZfjWhNTmYyioyuUzyTYi8jjbu12jZz"
+				"bzz-raw://e495befb7880e3cdd1011fda80eaef8e18c9b6c4980bd644569ee0c03079b9b6",
+				"dweb:/ipfs/QmdAFv8TuxRgeckLQJDnCk2TLbV2QwcRTUefdBujozvJ3v"
 			]
 		}
 	},

@@ -6,15 +6,143 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
 				"inputs": [
 					{
-						"internalType": "address payable",
-						"name": "_receiver",
+						"indexed": true,
+						"internalType": "address",
+						"name": "receiver",
 						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
 					}
 				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
+				"name": "CallResult",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "receiver",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "reason",
+						"type": "string"
+					}
+				],
+				"name": "ETHTransferFailed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "receiver",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "ETHTransferSuccess",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "receiver",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					}
+				],
+				"name": "SendResult",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "contractBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "decodeRevertMessage",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lastData",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -30,13 +158,58 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "receiver",
-				"outputs": [
+				"inputs": [
 					{
 						"internalType": "address payable",
-						"name": "",
+						"name": "_receiver",
 						"type": "address"
+					}
+				],
+				"name": "sendETH",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_receiver",
+						"type": "address"
+					}
+				],
+				"name": "sendETHUsingSend",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_receiver",
+						"type": "address"
+					}
+				],
+				"name": "sendETHUsingTransfer",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "successfulCalls",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -44,17 +217,78 @@
 			},
 			{
 				"inputs": [],
-				"name": "sendETH",
+				"name": "successfulSends",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "successfulTransfers",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSent",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_receiver",
+						"type": "address"
+					}
+				],
+				"name": "tryCallWithoutRevert",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_receiver",
+						"type": "address"
+					}
+				],
+				"name": "tryCatchTransfer",
 				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "triggerFallback",
-				"outputs": [],
 				"stateMutability": "payable",
-				"type": "function"
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -70,7 +304,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task55.sol": "ETHSender"
+			"remix-phase-2/task64.sol": "ETHSender"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -84,12 +318,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task55.sol": {
-			"keccak256": "0xccdfce1e43d3456d12c3e2378d176510a6dd101a35ee84c0d1005c2e218dc757",
+		"remix-phase-2/task64.sol": {
+			"keccak256": "0xffc03a2d0b1e649b6ed5f18466bd7b74d8490cfb8cc0b0a9055dc4d721847052",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://fd0ea5b34589ccd44e52fa2aff9bc5ee2582e0225465533864a26fb5b31112df",
-				"dweb:/ipfs/QmU1U7AA5UvB7dDcpPc1AeV179L2BJ4xD1DnJ9b2QL4bMU"
+				"bzz-raw://e495befb7880e3cdd1011fda80eaef8e18c9b6c4980bd644569ee0c03079b9b6",
+				"dweb:/ipfs/QmdAFv8TuxRgeckLQJDnCk2TLbV2QwcRTUefdBujozvJ3v"
 			]
 		}
 	},

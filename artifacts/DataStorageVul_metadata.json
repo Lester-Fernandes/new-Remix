@@ -7,7 +7,7 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "contractBalance",
+				"name": "getNumber",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -19,26 +19,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address payable",
-						"name": "_receiver",
-						"type": "address"
-					}
-				],
-				"name": "dangerousSend",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "lastSuccess",
+				"name": "lastCaller",
 				"outputs": [
 					{
-						"internalType": "bool",
+						"internalType": "address",
 						"name": "",
-						"type": "bool"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -47,19 +34,19 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address payable",
-						"name": "_receiver",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "_number",
+						"type": "uint256"
 					}
 				],
-				"name": "sendETH",
+				"name": "setNumber",
 				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "totalSent",
+				"name": "storedNumber",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -84,7 +71,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"remix-phase-2/task64.sol": "ETHSenderVul"
+			"remix-phase-2/task63.sol": "DataStorageVul"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -98,12 +85,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"remix-phase-2/task64.sol": {
-			"keccak256": "0x75e6dd541b5968fb23bb57cdbd57d05f5b84f84ae77042b135d22e1bba592ccb",
+		"remix-phase-2/task63.sol": {
+			"keccak256": "0x2bb639504006f76fd0a76b9780ff0fbd99968153cc8e2c0ef0adbe92e5aa2aef",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b1d2144ed0860d2fe5ebe56a151412cb18496d5e6d83163c6958caf0ec9fa932",
-				"dweb:/ipfs/Qme3123e6cVsfggMiAWKR1CiYoc6XaoDThzF6Jx9zVJRBc"
+				"bzz-raw://20c5e2f8ead874b9a2975f2e38448cf5d52a31d5e89cd7dc0ed74c0e1b58f66b",
+				"dweb:/ipfs/Qmba5TFTAy1ARPk4qSEym7EcGzAfuJciwp96j9rQaDisrQ"
 			]
 		}
 	},
