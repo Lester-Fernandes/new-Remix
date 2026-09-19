@@ -1,13 +1,13 @@
 {
-	"id": "331a006cc2442df25597ad23f08bc035",
+	"id": "36957967c220c804f645488f44a79822",
 	"_format": "hh-sol-build-info-1",
 	"solcVersion": "0.8.34",
 	"solcLongVersion": "0.8.34+commit.80d5c536",
 	"input": {
 		"language": "Solidity",
 		"sources": {
-			"remix-phase-2/task78.sol": {
-				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n"
+			"remix-phase-2/task79.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;"
 			}
 		},
 		"settings": {
@@ -40,9 +40,9 @@
 	},
 	"output": {
 		"sources": {
-			"remix-phase-2/task78.sol": {
+			"remix-phase-2/task79.sol": {
 				"ast": {
-					"absolutePath": "remix-phase-2/task78.sol",
+					"absolutePath": "remix-phase-2/task79.sol",
 					"exportedSymbols": {},
 					"id": 2,
 					"license": "MIT",
@@ -60,7 +60,7 @@
 							"src": "33:24:0"
 						}
 					],
-					"src": "33:28:0"
+					"src": "33:24:0"
 				},
 				"id": 0
 			}

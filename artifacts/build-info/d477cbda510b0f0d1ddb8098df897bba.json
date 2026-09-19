@@ -1,0 +1,69 @@
+{
+	"id": "d477cbda510b0f0d1ddb8098df897bba",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.34",
+	"solcLongVersion": "0.8.34+commit.80d5c536",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"remix-phase-2/task79.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n// contract TxOriginAuthVul {\r\n\r\n//     address public owner;\r\n\r\n//     constructor() {\r\n//         owner = msg.sender;\r\n//     }\r\n\r\n//     /*\r\n//     =====================================================\r\n//     DANGEROUS AUTH CHECK\r\n//     =====================================================\r\n//     */\r\n\r\n//     function withdrawAll() external {\r\n\r\n//         /*\r\n//          BAD PRACTICE:\r\n//         using tx.origin for authentication\r\n//         */\r\n\r\n//         require(tx.origin == owner, \"Not owner\");\r\n\r\n//         payable(owner).transfer(address(this).balance);\r\n//     }\r\n//     /*\r\n//     =====================================================\r\n//     NORMAL DEPOSIT\r\n//     =====================================================\r\n//     */\r\n\r\n//     function deposit() external payable {}\r\n// }\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"sources": {
+			"remix-phase-2/task79.sol": {
+				"ast": {
+					"absolutePath": "remix-phase-2/task79.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".20"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:24:0"
+						}
+					],
+					"src": "33:838:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

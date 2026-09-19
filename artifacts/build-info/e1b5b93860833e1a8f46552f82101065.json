@@ -1,0 +1,69 @@
+{
+	"id": "e1b5b93860833e1a8f46552f82101065",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.34",
+	"solcLongVersion": "0.8.34+commit.80d5c536",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"remix-phase-2/task76.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\n// contract VulnerableBankVul {\r\n\r\n//     mapping(address => uint256) public balance;\r\n\r\n//     /*\r\n//     =====================================================\r\n//     DEPOSIT ETH\r\n//     =====================================================\r\n//     */\r\n\r\n//     function deposit() external payable {\r\n//         balance[msg.sender] += msg.value;\r\n//     }\r\n\r\n//     /*\r\n//     =====================================================\r\n//     WITHDRAW ETH (VULNERABLE)\r\n//     =====================================================\r\n//     */\r\n\r\n//     function withdraw(uint256 amount) external {\r\n\r\n//         /*\r\n//         STEP 1:\r\n//         Check balance\r\n//         */\r\n//         require(balance[msg.sender] >= amount, \"Not enough balance\");\r\n\r\n//         /*\r\n//         STEP 2:\r\n//         EXTERNAL CALL FIRST ❌ (DANGER)\r\n//         */\r\n//         (bool success, ) = msg.sender.call{value: amount}(\"\");\r\n//         require(success, \"Transfer failed\");\r\n\r\n//         /*\r\n//         STEP 3:\r\n//         STATE UPDATE AFTER CALL ❌ (ROOT ISSUE)\r\n//         */\r\n//         balance[msg.sender] -= amount;\r\n//     }\r\n\r\n//     /*\r\n//     =====================================================\r\n//     VIEW BALANCE\r\n//     =====================================================\r\n//     */\r\n\r\n//     function getBalance(address user)\r\n//         external\r\n//         view\r\n//         returns (uint256)\r\n//     {\r\n//         return balance[user];\r\n//     }\r\n// }\r\n\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"sources": {
+			"remix-phase-2/task76.sol": {
+				"ast": {
+					"absolutePath": "remix-phase-2/task76.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".20"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:24:0"
+						}
+					],
+					"src": "33:1490:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
